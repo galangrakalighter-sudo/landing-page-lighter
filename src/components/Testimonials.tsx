@@ -83,12 +83,12 @@ const Testimonials = () => {
             <div key={item.id} onClick={() => toggleCard(item.id)} className={`p-6 tracking-widest rounded-xl shadow-lg`}>
               {/* Background visual */}
               <div
-                className="absolute inset-0 bg-cover bg-center opacity-20 rounded-xl"
+                className="bg-center opacity-20 rounded-xl"
                 style={{ backgroundImage: `url(${item.image})` }}
               ></div>
 
               {/* Dark overlay */}
-              <div className="absolute inset-0 bg-black bg-opacity-40 rounded-xl"></div>
+              <div className="absolute inset-0 bg-opacity-40 rounded-xl"></div>
 
               {/* Content */}
               <div className="relative text-left z-10">

@@ -14,41 +14,52 @@ export const toggleTheme = () => {
     "testimonials",
     "footer",
     "paragraf_sec1",
-    "eksplorasi"
+    "eksplorasi",
+    "section4"
   ];
 
-  // const text = document.getElementsByClassName("textChange");
+  const html = document.documentElement;
 
-  // for (let i = 0; i < text.length; i++) {
-  //   text[i].classList.remove("text-white");
-  //   text[i].classList.add("tracking-widest");
-  // }
+  if (html.classList.contains("dark")) {
+    html.classList.remove("dark");
+    localStorage.setItem("theme", "light");
+  } else {
+    html.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+  }
 
-  // const div = document.getElementsByClassName("divChange");
+  const text = document.getElementsByClassName("textChange");
 
-  // for (let i = 0; i < div.length; i++) {
-  //   div[i].classList.remove("bg-[#1A1A1A]");
-  //   div[i].classList.add("tracking-widest");
-  // }
+  for (let i = 0; i < text.length; i++) {
+    text[i].classList.remove("text-white");
+    text[i].classList.add("tracking-widest");
+  }
 
-  // const btn = document.getElementById("button_read");
+  const div = document.getElementsByClassName("divChange");
+
+  for (let i = 0; i < div.length; i++) {
+    div[i].classList.remove("bg-[#1A1A1A]");
+    div[i].classList.add("tracking-widest");
+  }
+
+  const btn = document.getElementById("button_read");
   
-  // if (btn.classList.contains("border-white")) {
-  //   btn.classList.remove("border-white");
-  //   btn.classList.add("border-black");
-  // } else {
-  //   btn.classList.remove("border-black");
-  //   btn.classList.add("border-white");
-  // }
+  if (btn.classList.contains("border-white")) {
+    btn.classList.remove("border-white");
+    btn.classList.add("border-black");
+  } else {
+    btn.classList.remove("border-black");
+    btn.classList.add("border-white");
+  }
 
-  // sections.forEach((id) => {
-  //   const el = document.getElementById(id);
-  //   if (el) {
-  //     (el as HTMLElement).style.backgroundColor =
-  //       next === "light" ? "#f7e6e6" : "#161616";
+  sections.forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      (el as HTMLElement).style.backgroundColor =
+        next === "light" ? "#f7e6e6" : "#161616";
 
-  //     (el as HTMLElement).style.color =
-  //       next === "light" ? "black" : "white";
-  //   }
-  // });
+      (el as HTMLElement).style.color =
+        next === "light" ? "black" : "white";
+    }
+  });
 };

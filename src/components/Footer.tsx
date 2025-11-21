@@ -3,38 +3,6 @@ import { scroller } from "react-scroll";
 import { Element } from "react-scroll";
 
 const Footer = () => {
-  const scrolCollect = () => {
-    scroller.scrollTo("collect-section", {
-      duration: 800,
-      delay: 0,
-      smooth: "easeInOutQuart",
-      offset: -50
-    });
-  }
-  const scrolAbout = () => {
-    scroller.scrollTo("about-section", {
-      duration: 800,
-      delay: 0,
-      smooth: "easeInOutQuart",
-      offset: -50
-    });
-  }
-  const scrolProcess = () => {
-    scroller.scrollTo("process-section", {
-      duration: 800,
-      delay: 0,
-      smooth: "easeInOutQuart",
-      offset: -50
-    });
-  }
-  const scrolContact = () => {
-    scroller.scrollTo("contact-section", {
-      duration: 800,
-      delay: 0,
-      smooth: "easeInOutQuart",
-      offset: -50
-    });
-  }
   return (
     <Element name="contact-section">
       <section id="contact" className="py-20 bg-gray-50">

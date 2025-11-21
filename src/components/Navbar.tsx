@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
   return (
     <>
       {/* NAVBAR */}
-      <nav className="fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-sm">
+      <nav className="fixed top-0 left-0 w-full z-50 bg-transparent">
         <div className="flex justify-between items-center px-8 py-4 text-white">
 
           {/* Brand */}
@@ -33,10 +33,22 @@ const Navbar: React.FC = () => {
 
             {/* Dark Mode Button */}
             <li>
-              <button onClick={toggleTheme} className="px-4 py-2 border rounded text-white">
-              Toggle Theme
-              </button>
-            </li>
+            <button
+              onClick={toggleTheme}
+              className="relative w-16 h-8 flex items-center bg-gray-300 dark:bg-gray-600 rounded-full p-1 transition"
+            >
+              <span
+                className="absolute left-1 text-yellow-400 dark:hidden">☀</span>
+              <span
+                className="absolute right-1 hidden dark:block text-white">🌙</span>
+
+              <span
+                className="bg-white w-6 h-6 rounded-full shadow-md transform transition-transform duration-300 
+                          dark:translate-x-8"
+              ></span>
+            </button>
+          </li>
+
           </ul>
 
           {/* Mobile Menu Button */}
@@ -50,12 +62,7 @@ const Navbar: React.FC = () => {
       </nav>
 
       {/* SIDEBAR OVERLAY */}
-      <div 
-        className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-40 transition-opacity ${
-          open ? "opacity-100 visible" : "opacity-0 invisible"
-        }`}
-        onClick={() => setOpen(false)}
-      />
+      <div className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-40 transition-opacity ${ open ? "opacity-100 visible" : "opacity-0 invisible" }`} onClick={() => setOpen(false)}/>
 
       {/* SIDEBAR MENU */}
       <div
