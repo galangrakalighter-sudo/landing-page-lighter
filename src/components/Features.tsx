@@ -26,7 +26,7 @@ const features = [
 const Features = () => {
   return (
     <Element name="about-section">
-    <section id="about" className="py-16 relative" style={{ backgroundColor: "#161616" }}>
+    <section id="about" className="py-16 relative bg-[#161616]">
   <div className="max-w-6xl mx-auto px-4">
 
     {/* WHO WE ARE & WHAT WE DO */}
@@ -34,9 +34,9 @@ const Features = () => {
 
       {/* WHO WE ARE */}
       <div className="w-full md:w-1/2">
-        <div className="p-6 tracking-widest rounded-xl shadow-lg">
-          <h3 className="text-xl font-bold text-white mb-3 textChange">WHO WE ARE?</h3>
-          <p className="text-white textChange">
+        <div className="p-6 tracking-widest rounded-xl">
+          <h3 className="text-xl font-bold text-white mb-3 textChange font-[Arial,Helvetica,sans-serif]">WHO WE ARE?</h3>
+          <p className="text-white textChange font-[Arial,Helvetica,sans-serif]">
             Lighter Media Group menjadi <strong>partner</strong> digital dalam membangun media digital bagi bisnis.
           </p>
         </div>
@@ -44,9 +44,9 @@ const Features = () => {
 
       {/* WHAT WE DO */}
       <div className="w-full md:w-1/2">
-        <div className="p-6 tracking-widest rounded-xl shadow-lg">
-          <h3 className="text-xl font-bold text-white textChange mb-3">WHAT WE DO?</h3>
-          <p className="text-white textChange">
+        <div className="p-6 tracking-widest rounded-xl">
+          <h3 className="text-xl font-bold text-white textChange mb-3 font-[Arial,Helvetica,sans-serif]">WHAT WE DO?</h3>
+          <p className="text-white textChange font-[Arial,Helvetica,sans-serif]">
             Lighter Media Group adalah perusahaan yang bergerak di bidang jasa media digital yang mengutamakan <strong>excellent service</strong> sebagai <strong>value</strong> utama.
           </p>
         </div>

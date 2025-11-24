@@ -5,7 +5,16 @@ import React from "react";
 const Collections: React.FC = () => {
   return (
     <Element name="collect-section">
-    <section id="why-digital-marketing-section" className="text-white py-16" style={{ backgroundColor: "#161616" }}>
+
+    <div className="grid grid-cols-3 w-full marqueChange h-10 bg-black" style={{ width: "100%"}}>
+  <marquee behavior="scroll" direction="left" scrollamount="15" className="text-white font-semibold textMove" style={{ width: "324%", paddingBottom: "6%", marginTop: "2%" }}>
+    <span className='textChange'>LIGHT THE WORLD THROUGH MEDIA</span>
+    <span className='textMoving textChange'>LIGHT THE WORLD THROUGH MEDIA</span>
+    <span className='textMoving textChange'>LIGHT THE WORLD THROUGH MEDIA</span>
+    <span className='textMoving textChange'>LIGHT THE WORLD THROUGH MEDIA</span>
+  </marquee>
+</div>
+    <section id="why-digital-marketing-section" className="text-white py-16 bg-[#161616]">
   <div className="relative max-w-6xl mx-auto px-4 z-20">
     <div className="flex flex-col md:flex-row items-center">
 
@@ -13,33 +22,21 @@ const Collections: React.FC = () => {
       <div className="w-full md:w-1/2 mb-10 md:mb-0 flex items-center">
         <div className="w-full flex justify-center">
           {/* Mobile Image */}
-          <img
-            src={Phone}
-            alt="Visual Marketing Digital Mobile"
-            className="block md:hidden w-[70%]"
-          />
+          <img src={Phone} alt="Visual Marketing Digital Mobile" className="block md:hidden w-[70%]"/>
 
           {/* Desktop Image */}
-          <img
-            src={Phone}
-            alt="Visual Marketing Digital Desktop"
-            className="hidden md:block w-[90%] mr-[45%]"
-          />
+          <img src={Phone} alt="Visual Marketing Digital Desktop" className="hidden md:block w-[90%] mr-[45%]"/>
         </div>
       </div>
 
       {/* TEXT SECTION */}
       <div className="w-full md:w-1/2 text-center md:text-left">
         <div className="flex flex-col items-center md:items-start justify-center md:justify-start gap-y-2">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl 
-                        font-extrabold mb-0 whitespace-nowrap 
-                        font-[Arial,Helvetica,sans-serif]">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-0 whitespace-nowrap font-[Arial,Helvetica,sans-serif]">
             WHY DIGITAL
           </h1>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl 
-                        font-extrabold mb-0 whitespace-nowrap 
-                        font-[Arial,Helvetica,sans-serif]">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-0 whitespace-nowrap font-[Arial,Helvetica,sans-serif]">
             MARKETING
           </h1>
         </div>

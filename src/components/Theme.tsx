@@ -15,15 +15,18 @@ export const toggleTheme = () => {
     "footer",
     "paragraf_sec1",
     "eksplorasi",
-    "section4"
+    "section4",
+    "contact"
   ];
 
   const html = document.documentElement;
 
   if (html.classList.contains("dark")) {
     html.classList.remove("dark");
+    html.classList.add("light");
     localStorage.setItem("theme", "light");
   } else {
+    html.classList.remove("dark");
     html.classList.add("dark");
     localStorage.setItem("theme", "dark");
   }
@@ -31,23 +34,44 @@ export const toggleTheme = () => {
   const text = document.getElementsByClassName("textChange");
 
   for (let i = 0; i < text.length; i++) {
-    text[i].classList.remove("text-white");
-    text[i].classList.add("tracking-widest");
+    if (next == "light"){
+      text[i].classList.remove("text-white");
+      text[i].classList.add("text-black");
+    }else{
+      text[i].classList.remove("text-black");
+      text[i].classList.add("text-white");
+    }
   }
 
   const div = document.getElementsByClassName("divChange");
 
   for (let i = 0; i < div.length; i++) {
-    div[i].classList.remove("bg-[#1A1A1A]");
-    div[i].classList.add("tracking-widest");
+    if (next == "light"){
+      div[i].classList.remove("bg-[#161616]");
+      div[i].classList.add("bg-white");
+    } else {
+      div[i].classList.remove("bg-white");
+      div[i].classList.add("bg-[#161616]");
+    }
+  }
+
+  const marque = document.getElementsByClassName("marqueChange")
+  for (let i = 0; i < marque.length; i++) {
+    if (next == "light"){
+      marque[i].classList.remove("bg-black");
+      marque[i].classList.add("bg-[#F0EBEB]");
+    } else {
+      marque[i].classList.remove("bg-[#F0EBEB]");
+      marque[i].classList.add("bg-black");
+    }
   }
 
   const btn = document.getElementById("button_read");
   
-  if (btn.classList.contains("border-white")) {
+  if(next == "light"){
     btn.classList.remove("border-white");
     btn.classList.add("border-black");
-  } else {
+  } else{
     btn.classList.remove("border-black");
     btn.classList.add("border-white");
   }
@@ -56,7 +80,7 @@ export const toggleTheme = () => {
     const el = document.getElementById(id);
     if (el) {
       (el as HTMLElement).style.backgroundColor =
-        next === "light" ? "#f7e6e6" : "#161616";
+        next === "light" ? "white" : "#161616";
 
       (el as HTMLElement).style.color =
         next === "light" ? "black" : "white";
