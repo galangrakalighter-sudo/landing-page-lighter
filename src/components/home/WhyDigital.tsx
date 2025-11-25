@@ -2,12 +2,12 @@ import Phone from '@/assets/phone.png'
 import { Element } from "react-scroll";
 import React from "react";
 
-const Collections: React.FC = () => {
+const WhyDigital: React.FC = () => {
   return (
     <Element name="collect-section">
 
     <div className="grid grid-cols-3 w-full marqueChange h-10 bg-black" style={{ width: "100%"}}>
-  <marquee behavior="scroll" direction="left" scrollamount="15" className="text-white font-semibold textMove" style={{ width: "324%", paddingBottom: "6%", marginTop: "2%" }}>
+  <marquee behavior="scroll" direction="left" scrollamount="15" className="text-white font-semibold textMove mt-[6%] md:mt-[2%]" style={{ width: "300%", paddingBottom: "6%"}}>
     <span className='textChange'>LIGHT THE WORLD THROUGH MEDIA</span>
     <span className='textMoving textChange'>LIGHT THE WORLD THROUGH MEDIA</span>
     <span className='textMoving textChange'>LIGHT THE WORLD THROUGH MEDIA</span>
@@ -63,4 +63,4 @@ const Collections: React.FC = () => {
   );
 };
 
-export default Collections;
+export default WhyDigital;

@@ -1,21 +1,25 @@
-import Hero from "@/components/Hero";
-import Collections from "@/components/Collections";
-import Features from "@/components/Features";
-import Testimonials from "@/components/Testimonials";
-import CTA from "@/components/CTA";
+import Home from "@/components/Home";
+import WhyDigital from "@/components/home/WhyDigital";
+import WhoAreWe from "@/components/home/WhoAreWe";
+import Jelajah from "@/components/home/Jelajah";
+import Partnership from "@/components/Partnership";
 import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/home/Navbar";
+import Projects from "@/components/home/Projects";
+import Maps from "@/components/Maps";
 import React, { useState } from "react";
 
 const Index: React.FC = () => {
   return (
     <main className="min-h-screen">
       <Navbar />
-      <Hero />
-      <Collections />
-      <Features />
-      <Testimonials />
-      <CTA />
+      <Home />
+      <WhyDigital />
+      <WhoAreWe />
+      <Jelajah />
+      <Projects />
+      <Maps />
+      <Partnership />
       <Footer />
     </main>
   );

@@ -1,6 +1,6 @@
 import heroImage from "@/assets/Home.png";
 
-const Hero = () => {
+const Home = () => {
   return (
     <>
     {/* <section> */}
@@ -19,4 +19,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Home;

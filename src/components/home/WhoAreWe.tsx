@@ -1,5 +1,7 @@
 import { Sparkles, Heart, Palette, Package } from "lucide-react";
 import { Element } from "react-scroll";
+import Garis from "@/assets/garis.png"
+import Garis_Hitam from "@/assets/garis_hitam.png"
 const features = [
   {
     icon: Sparkles,
@@ -23,7 +25,7 @@ const features = [
   },
 ];
 
-const Features = () => {
+const WhoAreWe = () => {
   return (
     <Element name="about-section">
     <section id="about" className="py-16 relative bg-[#161616]">
@@ -58,22 +60,28 @@ const Features = () => {
     <div className="grid grid-cols-3 text-center mt-10">
 
       {/* CLIENT */}
-      <div className="p-6">
-        <p className="text-4xl font-extrabold text-white textChange">0 +</p>
-        <p className="mt-2 text-gray-400 text-xs text-white textChange font-medium">CLIENT</p>
+                <div className="p-6">
+                    <p className="text-4xl font-extrabold text-white textChange md:ml-[5%]">100 +</p>
+                    <p className="mt-2 text-gray-400 text-xs text-white textChange font-medium md:mr-[3%]">CLIENT</p>
+                </div>
+
+                {/* PARTNERSHIP */}
+                <div className="p-6">
+                    <p className="text-4xl font-extrabold text-white textChange md:ml-[4%]">50 +</p>
+                    <p className="mt-2 text-gray-400 text-xs text-white textChange font-medium md:ml-[4%]">PARTNERSHIP</p>
+                </div>
+
+                {/* BUSINESS */}
+                <div className="p-6">
+                    <p className="text-4xl font-extrabold text-white textChange md:ml-[4%]">8 Y</p>
+                    <p className="mt-2 text-gray-400 text-xs text-white textChange font-medium md:ml-[4%]">BUSINESS</p>
+                </div>
+
+      <div className="w-[210%] ml-[45%]">
+        <img src={Garis} className="w-full" id="garisPutih"/>
+        <img src={Garis_Hitam} className="w-full" id="garisHitam" style={{ display: "none"}}/>
       </div>
 
-      {/* PARTNERSHIP */}
-      <div className="p-6">
-        <p className="text-4xl font-extrabold text-white textChange">0 +</p>
-        <p className="mt-2 text-gray-400 text-xs text-white textChange font-medium">PARTNERSHIP</p>
-      </div>
-
-      {/* BUSINESS */}
-      <div className="p-6">
-        <p className="text-4xl font-extrabold text-white textChange">0 Y</p>
-        <p className="mt-2 text-gray-400 text-xs text-white textChange font-medium">BUSINESS</p>
-      </div>
 
     </div>
 
@@ -84,4 +92,4 @@ const Features = () => {
   );
 };
 
-export default Features;
+export default WhoAreWe;

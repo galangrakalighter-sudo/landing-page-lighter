@@ -16,8 +16,21 @@ export const toggleTheme = () => {
     "paragraf_sec1",
     "eksplorasi",
     "section4",
-    "contact"
+    "contact",
+    "ourproject",
+    "maps_home"
   ];
+
+  const garisPutih = document.getElementById("garisPutih");
+  const garisHitam = document.getElementById("garisHitam");
+
+  if(next == "light"){
+    garisPutih.style.display = "none";
+    garisHitam.style.display = "block";
+  } else {
+    garisHitam.style.display = "none";
+    garisPutih.style.display = "block";
+  }
 
   const html = document.documentElement;
 
