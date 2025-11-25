@@ -2,6 +2,8 @@ import Home from "@/components/Home";
 // import WhyDigital from "@/components/home/WhyDigital";
 import Section2 from "@/components/about/Section2";
 import Section3 from "@/components/about/Section3";
+import Section4 from "@/components/about/Section4";
+import Section5 from "@/components/about/Section5";
 // import WhoAreWe from "@/components/home/WhoAreWe";
 // import Jelajah from "@/components/home/Jelajah";
 import Partnership from "@/components/Partnership";
@@ -18,6 +20,8 @@ const About: React.FC = () => {
       <Home />
       <Section2 />
       <Section3 />
+      <Section4 />
+      <Section5 />
       {/* <WhyDigital /> */}
       {/* <WhoAreWe />
       <Jelajah />

@@ -1,6 +1,6 @@
 import React from "react";
 import Phone from "@/assets/phone.png"
-import About_sec1 from "@/assets/About-sec1.png"
+import About_sec1 from "@/assets/About/About-sec1.png"
 import Garis from "@/assets/garis.png"
 import Garis_Hitam from "@/assets/garis_hitam.png"
 

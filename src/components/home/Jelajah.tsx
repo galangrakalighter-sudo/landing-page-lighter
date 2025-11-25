@@ -1,11 +1,11 @@
 // import { Card, CardContent } from "@/components/ui/card";
 // import { Star } from "lucide-react";
 import { useState } from "react";
-import Image1 from "@/assets/image1-eksplor.png"
-import Image2 from "@/assets/image2-eksplor.png"
-import Image3 from "@/assets/image3-eksplor.png"
-import Image4 from "@/assets/image4-eksplor.png"
-import Image5 from "@/assets/image5-eksplor.png"
+import Image1 from "@/assets/home/image1-eksplor.png"
+import Image2 from "@/assets/home/image2-eksplor.png"
+import Image3 from "@/assets/home/image3-eksplor.png"
+import Image4 from "@/assets/home/image4-eksplor.png"
+import Image5 from "@/assets/home/image5-eksplor.png"
 
 const divisions = [
   {

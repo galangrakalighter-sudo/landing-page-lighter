@@ -1,11 +1,11 @@
 import heroImage from "@/assets/Home.png";
-import Project1 from "@/assets/OurProject1.png"
-import Project2 from "@/assets/OurProject2.png"
-import Project3 from "@/assets/OurProject3.png"
-import Project4 from "@/assets/OurProject4.png"
-import Project5 from "@/assets/OurProject5.png"
-import Project6 from "@/assets/OurProject6.png"
-import Project7 from "@/assets/OurProject7.png"
+import Project1 from "@/assets/home/OurProject1.png"
+import Project2 from "@/assets/home/OurProject2.png"
+import Project3 from "@/assets/home/OurProject3.png"
+import Project4 from "@/assets/home/OurProject4.png"
+import Project5 from "@/assets/home/OurProject5.png"
+import Project6 from "@/assets/home/OurProject6.png"
+import Project7 from "@/assets/home/OurProject7.png"
 
 const Projects = () => {
   return (
@@ -34,7 +34,7 @@ const Projects = () => {
 
 
         <div className="flex-1 w-full overflow-hidden flex justify-end md:mr-5">
-        <marquee behavior="scroll" direction="left" scrollamount={15} className="">
+        <marquee behavior="scroll" direction="left" scrollamount={15} loop="infinite">
             <div className="inline-flex gap-6">
             <img src={Project1} className="h-30" />
             <img src={Project2} className="h-30" />
