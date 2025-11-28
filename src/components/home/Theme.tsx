@@ -7,7 +7,6 @@ export const toggleTheme = () => {
 
   // Daftar ID section yang ingin kamu ubah
   const sections = [
-    "about",
     "why-digital-marketing-section",
     "features",
     "collections",
@@ -15,11 +14,23 @@ export const toggleTheme = () => {
     "footer",
     "paragraf_sec1",
     "eksplorasi",
-    "section4",
+    "partnership",
     "contact",
     "ourproject",
     "maps_home"
   ];
+
+  const About = document.getElementById("about")
+
+  if(next == "light"){
+    About.classList.remove("bg-[radial-gradient(circle,rgba(0,0,0,0.73)_0%,rgba(130,130,130,0.33)_100%)]")
+    About.classList.add("bg-white")
+    About.style.color = "white"
+  } else {
+    About.classList.remove("bg-white")
+    About.classList.add("bg-[radial-gradient(circle,rgba(0,0,0,0.73)_0%,rgba(130,130,130,0.33)_100%)]")
+    About.style.color = "black"
+  }
 
   const garisPutih = document.getElementById("garisPutih");
   const garisHitam = document.getElementById("garisHitam");
@@ -87,6 +98,18 @@ export const toggleTheme = () => {
   } else{
     btn.classList.remove("border-black");
     btn.classList.add("border-white");
+  }
+
+  if(next == "light"){
+    document.getElementById("gradienTeks1").style.display = "none"
+    document.getElementById("gradienTeks2").style.display = "none"
+    document.getElementById("teks_biasa1").style.display = "block"
+    document.getElementById("teks_biasa2").style.display = "block"
+  }else{
+    document.getElementById("teks_biasa1").style.display = "none"
+    document.getElementById("teks_biasa2").style.display = "none"
+    document.getElementById("gradienTeks1").style.display = "block"
+    document.getElementById("gradienTeks2").style.display = "block"
   }
 
   sections.forEach((id) => {

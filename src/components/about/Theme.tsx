@@ -7,30 +7,13 @@ export const toggleTheme = () => {
 
   // Daftar ID section yang ingin kamu ubah
   const sections = [
-    "about",
-    "why-digital-marketing-section",
-    "features",
-    "collections",
-    "testimonials",
-    "footer",
-    "paragraf_sec1",
-    "eksplorasi",
-    "section4",
+    "partnership",
     "contact",
-    "ourproject",
-    "maps_home"
+    "about_us",
+    "visiMisi",
+    "coreValue",
+    "ourClient",
   ];
-
-  const garisPutih = document.getElementById("garisPutih");
-  const garisHitam = document.getElementById("garisHitam");
-
-  if(next == "light"){
-    garisPutih.style.display = "none";
-    garisHitam.style.display = "block";
-  } else {
-    garisHitam.style.display = "none";
-    garisPutih.style.display = "block";
-  }
 
   const html = document.documentElement;
 
@@ -43,7 +26,7 @@ export const toggleTheme = () => {
     html.classList.add("dark");
     localStorage.setItem("theme", "dark");
   }
-
+    
   const text = document.getElementsByClassName("textChange");
 
   for (let i = 0; i < text.length; i++) {
@@ -53,6 +36,42 @@ export const toggleTheme = () => {
     }else{
       text[i].classList.remove("text-black");
       text[i].classList.add("text-white");
+    }
+  }
+
+  const hover = document.getElementsByClassName("borderChange");
+  
+  for (let i = 0; i < hover.length; i++) {
+    console.log("masuk hover");
+    if (next == "light"){
+      hover[i].classList.remove("border-white/30");
+      hover[i].classList.add("border-black/100");
+    }else{
+      hover[i].classList.remove("border-black/100");
+      hover[i].classList.add("border-white/30");
+    }
+  }
+
+  const garisPutih = document.getElementById("garisPutih");
+  const garisHitam = document.getElementById("garisHitam");
+
+  if(next == "light"){
+    garisPutih.style.display = "none";
+    garisHitam.style.display = "block";
+  } else {
+    garisHitam.style.display = "none";
+    garisPutih.style.display = "block";
+  }
+
+  const titik = document.getElementsByClassName("titikDiv");
+
+  for (let i = 0; i < titik.length; i++) {
+    if (next == "light"){
+      titik[i].classList.remove("bg-white");
+      titik[i].classList.add("bg-[#161616]");
+    } else {
+      titik[i].classList.remove("bg-[#161616]");
+      titik[i].classList.add("bg-white");
     }
   }
 
@@ -79,15 +98,15 @@ export const toggleTheme = () => {
     }
   }
 
-  const btn = document.getElementById("button_read");
+  // const btn = document.getElementById("button_read");
   
-  if(next == "light"){
-    btn.classList.remove("border-white");
-    btn.classList.add("border-black");
-  } else{
-    btn.classList.remove("border-black");
-    btn.classList.add("border-white");
-  }
+  // if(next == "light"){
+  //   btn.classList.remove("border-white");
+  //   btn.classList.add("border-black");
+  // } else{
+  //   btn.classList.remove("border-black");
+  //   btn.classList.add("border-white");
+  // }
 
   sections.forEach((id) => {
     const el = document.getElementById(id);

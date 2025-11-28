@@ -5,7 +5,6 @@ import Logo from '@/assets/logo.jpg'
 
 const Navbar: React.FC = () => {
   const [open, setOpen] = useState<boolean>(false);
-  const [navBg, setNavBg] = useState(false);
 
   const navLinks = [
   { name: "Home", href: "#" },
@@ -22,29 +21,11 @@ const Navbar: React.FC = () => {
       }
   }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const section2 = document.getElementById("why-digital-marketing-section");
-
-      if (section2) {
-        const sectionTop = section2.offsetTop;
-
-        // Jika posisi scroll lewat section2 -> ubah bg navbar
-        if (window.scrollY >= sectionTop - 80) {
-          setNavBg(true);
-        } else {
-          setNavBg(false);
-        }
-      }}
-      window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
-  })
-
    
   return (
     <>
       {/* NAVBAR */}
-      <nav className={`fixed top-0 left-0 w-full z-50 ${navBg ? "bg-[#28292D]" : "bg-transparent"}`}>
+      <nav className={`fixed top-0 left-0 w-full z-50 bg-[#28292D]`}>
         <div className="flex justify-between items-center px-8 py-4 text-white">
 
           {/* Brand */}
@@ -54,17 +35,11 @@ const Navbar: React.FC = () => {
 
           {/* Desktop Menu */}
           <ul className="hidden md:flex items-center space-x-8">
-            <li><a href="/" className="hover:text-gray-300">Home</a></li>
-            <li><a href="/about" className="hover:text-gray-300">About Us</a></li>
-            <li><a href="#eksplorasi" className="hover:text-gray-300">Eksplorasi</a></li>
-            <li>
-              <a
-                href="#"
-                className="bg-black px-4 py-2 rounded-full border border-white shadow-sm hover:bg-gray-800 transition"
-              >
-                Contact
-              </a>
-            </li>
+            <li><a href="/" className="hover:text-gray-300">Beranda</a></li>
+            <li><a href="/tentang" className="hover:text-gray-300">Tentang Kami</a></li>
+            <li><a href="#eksplorasi" className="hover:text-gray-300">Berita</a></li>
+            <li><a href="#eksplorasi" className="hover:text-gray-300">Merek</a></li>
+            <li><a href="#contact" className="hover:text-gray-300 transition">Kontak</a></li>
 
             {/* Dark Mode Button */}
             <li>
@@ -119,7 +94,7 @@ const Navbar: React.FC = () => {
 
         <ul className="mt-12 space-y-6 text-lg">
           <li><a href="/" className="block hover:text-gray-300" onClick={() => setOpen(false)}>Home</a></li>
-          <li><a href="/about" className="block hover:text-gray-300" onClick={() => setOpen(false)}>About Us</a></li>
+          <li><a href="/tentang" className="block hover:text-gray-300" onClick={() => setOpen(false)}>About Us</a></li>
           <li><a href="#eksplorasi" className="block hover:text-gray-300" onClick={() => setOpen(false)}>Eksplorasi</a></li>
 
           <li>

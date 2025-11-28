@@ -6,7 +6,8 @@ import Image2 from "@/assets/home/image2-eksplor.png"
 import Image3 from "@/assets/home/image3-eksplor.png"
 import Image4 from "@/assets/home/image4-eksplor.png"
 import Image5 from "@/assets/home/image5-eksplor.png"
-
+import FlipCard from "@/components/home/Card"
+import Card from "../Card";
 const divisions = [
   {
     id: "raddine",
@@ -62,27 +63,26 @@ const Jelajah = () => {
 
        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
   {divisions.map((item) => (
-    <div key={item.id} className="bg-neutral-primary-soft border border-default rounded-md shadow-xs p-6 flex flex-col justify-between">
-      {/* --- TOP AREA --- */}
-      <div>
-        <div className="w-full h-50 overflow-hidden rounded-md">
-          <img className="w-[65%] md:w-[100%] lg:w-[100%] mx-auto object-cover" src={item.image} alt={item.title} />
-        </div>
+        <FlipCard image={item.image}/>
+    // <div key={item.id} className="bg-neutral-primary-soft border border-default rounded-md shadow-xs p-6 flex flex-col justify-between">
+    //   <div>
+    //     <div className="w-full h-50 overflow-hidden rounded-md">
+    //       <img className="w-[65%] md:w-[100%] lg:w-[100%] mx-auto object-cover" src={item.image} alt={item.title} />
+    //     </div>
 
-        <h3 className="mt-6 mb-2 text-2xl font-semibold font-[Arial,Helvetica,sans-serif] text-center md:text-left">{item.title}</h3>
-        <p className="text-body font-[Arial,Helvetica,sans-serif] text-center md:text-left text-1xl">{item.desc}</p>
-      </div>
+    //     <h3 className="mt-6 mb-2 text-2xl font-semibold font-[Arial,Helvetica,sans-serif] text-center md:text-left">{item.title}</h3>
+    //     <p className="text-body font-[Arial,Helvetica,sans-serif] text-center md:text-left text-1xl">{item.desc}</p>
+    //   </div>
 
-      {/* --- READ MORE BUTTON (RATA BAWAH) --- */}
-      <div className="mt-6 text-center md:text-left">
-        <a href="#" className="inline-flex items-center text-body bg-neutral-secondary-medium border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading shadow-xs font-medium leading-5 rounded-md text-sm px-10 py-3">
-          Read more
-          <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24">
-            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14m-4-4 4 4-4 4"/>
-          </svg>
-        </a>
-      </div>
-    </div>
+    //   <div className="mt-6 text-center md:text-left">
+    //     <a href="#" className="inline-flex items-center text-body bg-neutral-secondary-medium border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading shadow-xs font-medium leading-5 rounded-md text-sm px-10 py-3">
+    //       Read more
+    //       <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24">
+    //         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14m-4-4 4 4-4 4"/>
+    //       </svg>
+    //     </a>
+    //   </div>
+    // </div>
   ))}
 </div>
 

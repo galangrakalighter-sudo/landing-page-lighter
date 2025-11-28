@@ -16,19 +16,19 @@ const Section4 = () => {
     return (
         <>
             <section>
-                <div className="max-w-8xl mx-auto px-4 pt-[6%] text-center bg-[#161616]">
-                    <div className="absolute md:ml-[62%] md:mt-[3%] w-32 h-32">
-                    <div className="grid grid-cols-6 gap-2">
+                <div className="max-w-8xl mx-auto px-4 pt-[6%] text-center bg-[#161616]" id="coreValue">
+                    {/* <div className="absolute sm:ml-[65%] sm:mt-[-5%] md:ml-[65%] md:mt-[-1%] lg:mt-[1%] xl:ml-[60%] w-32">
+                    <div className="grid grid-cols-6     gap-2">
                         {Array.from({ length: 36 }).map((_, i) => (
-                        <div key={i} className="w-1 h-1 bg-white rounded-full opacity-60" />
+                        <div key={i} className="w-1 h-1 bg-white rounded-full opacity-60 titikDiv" />
                         ))}
                     </div>
-                    </div>
-                    <h1 className="text-white text-8xl md:text-8xl font-semibold md:mt-[4%] text-white textChange font-[Arial,Helvetica,sans-serif]">
+                    </div> */}
+                    <h1 className="text-white sm:text-6xl md:text-6xl md:mt-[4%] lg:text-7xl text-white textChange font-[Arial,Helvetica,sans-serif]">
                     CORE VALUE
                     </h1>
 
-                    <div className="max-w-7xl mt-[3%] mx-auto px-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-10 place-items-center">
+                    <div className="sm:mt-[5%] sm:text-1xl md:mt-[3%] px-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 md:gap-10 lg:gap-10 xl:gap-10 place-items-center">
 
                         {values.map((item, index) => (
                         <div key={index} className="flex flex-col items-center space-y-4">
@@ -39,7 +39,7 @@ const Section4 = () => {
                             </div>
 
                             {/* Label */}
-                            <p className="text-white tracking-wide text-lg font-[Arial,Helvetica,sans-serif]">
+                            <p className="text-white tracking-wide text-lg font-[Arial,Helvetica,sans-serif] textChange">
                             {item.label}
                             </p>
                         </div>

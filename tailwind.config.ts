@@ -112,6 +112,10 @@ export default {
             opacity: "1"
           }
         },
+        spinSlow: {
+          '0%': { transform: 'rotateZ(0deg)' },
+          '100%': { transform: 'rotateZ(360deg)' },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -120,6 +124,7 @@ export default {
         "scale-in": "scale-in 0.4s ease-out",
         "fadeInUp": "fadeInUp 0.3s ease-out forwards",
         "fadeOutDown": "fadeOutDown 0.3s ease-in forwards",
+        "spinSlow": 'spinSlow 4s linear infinite',
       },
     },
     plugin: []

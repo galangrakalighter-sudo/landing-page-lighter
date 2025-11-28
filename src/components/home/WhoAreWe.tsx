@@ -28,7 +28,7 @@ const features = [
 const WhoAreWe = () => {
   return (
     <Element name="about-section">
-    <section id="about" className="py-16 relative bg-[#161616]">
+    <section id="about" className="py-16 relative bg-[radial-gradient(circle,rgba(0,0,0,0.73)_0%,rgba(130,130,130,0.33)_100%)]">
   <div className="max-w-6xl mx-auto px-4">
 
     {/* WHO WE ARE & WHAT WE DO */}
