@@ -12,7 +12,6 @@ export const toggleTheme = () => {
     "about_us",
     "visiMisi",
     "coreValue",
-    "ourClient",
   ];
 
   const html = document.documentElement;

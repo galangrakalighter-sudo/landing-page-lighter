@@ -7,6 +7,7 @@ interface GradientTextProps {
   colors?: string[];
   animationSpeed?: number;
   showBorder?: boolean;
+  id?: string;
 }
 
 export default function GradientText({
@@ -14,7 +15,8 @@ export default function GradientText({
   className = '',
   colors = ['#40ffaa', '#4079ff', '#40ffaa', '#4079ff', '#40ffaa'],
   animationSpeed = 8,
-  showBorder = false
+  showBorder = false,
+  id,
 }: GradientTextProps) {
   const gradientStyle = {
     backgroundImage: `linear-gradient(to right, ${colors.join(', ')})`,
@@ -24,7 +26,7 @@ export default function GradientText({
   return (
     <div className={`animated-gradient-text ${className}`}>
       {showBorder && <div className="gradient-overlay" style={gradientStyle}></div>}
-      <div className="text-content" style={gradientStyle}>
+      <div className="text-content" style={gradientStyle} id={id}>
         {children}
       </div>
     </div>

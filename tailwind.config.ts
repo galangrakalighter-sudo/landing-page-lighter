@@ -126,6 +126,9 @@ export default {
         "fadeOutDown": "fadeOutDown 0.3s ease-in forwards",
         "spinSlow": 'spinSlow 4s linear infinite',
       },
+      screens : {
+        xs: "360px"
+      }
     },
     plugin: []
   },

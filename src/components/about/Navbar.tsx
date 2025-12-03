@@ -40,7 +40,26 @@ const Navbar: React.FC = () => {
             <li><a href="/" className="hover:text-gray-300">Beranda</a></li>
             <li><a href="/tentang" className="hover:text-gray-300">Tentang Kami</a></li>
             <li><a href="#eksplorasi" className="hover:text-gray-300">Berita</a></li>
-            <li><a href="#eksplorasi" className="hover:text-gray-300">Merek</a></li>
+            <li>
+  <div className="relative group">
+    <button className="dropButton px-4 py-2 flex items-center gap-2 text-white">
+      Produk
+      <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className="w-4 h-4 text-gray-400 transition-transform duration-200 group-hover:rotate-180">
+        <path fillRule="evenodd" clipRule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"/>
+      </svg>
+    </button>
+    <div className="dropdown-content absolute left-0 mt-2 w-48 bg-[#28292D] shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100  group-hover:visible transition-all duration-200 z-20">
+      <a className="block px-4 py-2 hover:text-gray-300" href="#">Branding Agency</a>
+      <a className="block px-4 py-2 hover:text-gray-300" href="#">Digital Marketing Agency</a>
+      <a className="block px-4 py-2 hover:text-gray-300" href="#">E-Commmerce Agency</a>
+      <a className="block px-4 py-2 hover:text-gray-300" href="#">Tech Agency</a>
+      <a className="block px-4 py-2 hover:text-gray-300" href="#">Event Organizer</a>
+      <a className="block px-4 py-2 hover:text-gray-300" href="#">Multimedia</a>
+      <a className="block px-4 py-2 hover:text-gray-300" href="#">Academy</a>
+    </div>
+  </div>
+</li>
+
             <li><a href="#contact" className="hover:text-gray-300 transition">Kontak</a>
             </li>
 
@@ -97,9 +116,25 @@ const Navbar: React.FC = () => {
 
         <ul className="mt-12 space-y-6 text-lg">
           <li><a href="/" className="block hover:text-gray-300" onClick={() => setOpen(false)}>Home</a></li>
-          <li><a href="/tentang" className="block hover:text-gray-300" onClick={() => setOpen(false)}>About Us</a></li>
-          <li><a href="#eksplorasi" className="block hover:text-gray-300" onClick={() => setOpen(false)}>Eksplorasi</a></li>
-
+          <li><a href="/tentang" className="block hover:text-gray-300" onClick={() => setOpen(false)}>Tentang Kami</a></li>
+          <li><a href="#eksplorasi" className="block hover:text-gray-300" onClick={() => setOpen(false)}>Berita</a></li>
+          <div className="relative group">
+                <button className="dropButton py-1 flex items-center gap-2 text-white">
+                  Produk
+                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className="w-4 h-4 text-gray-400 transition-transform duration-200 group-hover:rotate-180">
+                    <path fillRule="evenodd" clipRule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"/>
+                  </svg>
+                </button>
+                <div className="dropdown-content absolute left-0 mt-2 w-48 bg-[#28292D] shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100  group-hover:visible transition-all duration-200 z-20">
+                  <a className="block px-4 py-2 hover:text-gray-300" onClick={() => setOpen(false)} href="#">Branding Agency</a>
+                  <a className="block px-4 py-2 hover:text-gray-300" onClick={() => setOpen(false)} href="#">Digital Marketing Agency</a>
+                  <a className="block px-4 py-2 hover:text-gray-300" onClick={() => setOpen(false)} href="#">E-Commmerce Agency</a>
+                  <a className="block px-4 py-2 hover:text-gray-300" onClick={() => setOpen(false)} href="#">Tech Agency</a>
+                  <a className="block px-4 py-2 hover:text-gray-300" onClick={() => setOpen(false)} href="#">Event Organizer</a>
+                  <a className="block px-4 py-2 hover:text-gray-300" onClick={() => setOpen(false)} href="#">Multimedia</a>
+                  <a className="block px-4 py-2 hover:text-gray-300" onClick={() => setOpen(false)} href="#">Academy</a>
+                </div>
+              </div>
           <li>
             <a href="#" className="block bg-black px-4 py-2 rounded-full border border-white shadow-sm hover:bg-gray-800 transition" onClick={() => setOpen(false)}>
               Contact

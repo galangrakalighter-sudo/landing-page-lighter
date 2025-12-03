@@ -1,6 +1,6 @@
 .logoloop {
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden !important;
 
   --logoloop-gap: 32px;
   --logoloop-logoHeight: 28px;
@@ -14,8 +14,8 @@
 }
 
 .logoloop--scale-hover {
-  padding-top: calc(var(--logoloop-logoHeight) * 0.1);
-  padding-bottom: calc(var(--logoloop-logoHeight) * 0.1);
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,6 +27,7 @@
 .logoloop__track {
   display: flex;
   width: max-content;
+  flex-wrap: nowrap;
   will-change: transform;
   user-select: none;
   position: relative;
@@ -35,8 +36,8 @@
 
 .logoloop--vertical .logoloop__track {
   flex-direction: column;
-  height: max-content;
-  width: 100%;
+  height: 100%;
+  width: max-content%;
 }
 
 .logoloop__list {
@@ -91,7 +92,7 @@
 
 .logoloop--scale-hover .logoloop__item:hover img,
 .logoloop--scale-hover .logoloop__item:hover .logoloop__node {
-  transform: scale(1.2);
+  transform: scale(1.1);
   transform-origin: center center;
 }
 

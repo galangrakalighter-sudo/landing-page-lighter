@@ -21,7 +21,7 @@ const Section2 = () => {
 
             {/* TEXT SECTION */}
             <div className="w-full md:w-1/2 text-center sm:text-left sm:ml-[15%] md:text-left">
-                <p className="mt-4 text-white text-base sm:text-lg md:text-2xl lg:text-2xl leading-relaxed max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl md:mx-0 font-[Arial,Helvetica,sans-serif] textChange">
+                <p className="xs:mt-0 text-white text-xl sm:text-lg md:text-2xl lg:text-2xl leading-relaxed max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl md:mx-0 font-[Arial,Helvetica,sans-serif] textChange">
                 Lighter Media Group adalah perusahaan jasa media digital yang berlokasi di Bandung.
                 Perusahaan ini berdiri pada tahun 2018. Lighter Media Group berawal dari studio kecil
                 dengan sumber daya terbatas. Lighter Media Group menyediakan solusi yang membantu bisnis
@@ -31,23 +31,23 @@ const Section2 = () => {
             </div>
 
             </div>
-        <div className="grid grid-cols-3 text-center md:pt-[5%]">
+        <div className="grid grid-cols-3 xs:pt-[5%] text-center md:pt-[5%]">
                 {/* CLIENT */}
                 <div className="p-6">
-                    <p className="text-4xl font-extrabold sm:ml-[20%] md:mr-[8%] lg:mr-[12%] text-white textChange">100 +</p>
-                    <p className="mt-2 text-gray-400 text-xs text-white textChange font-medium md:mr-[3%]">CLIENT</p>
+                    <p className="xs:text-3xl xs:ml-[-10%] font-extrabold sm:ml-[20%] md:mr-[18%] lg:mr-[20%] text-white textChange">100&nbsp;+</p>
+                    <p className="xs:mt-3 xs:mr-[5%] text-gray-400 text-xs text-white textChange font-medium md:mr-[3%] md:text-[100%]">CLIENT</p>
                 </div>
 
                 {/* PARTNERSHIP */}
                 <div className="p-6">
-                    <p className="text-4xl font-extrabold text-white textChange md:ml-[4%]">50 +</p>
-                    <p className="mt-2 text-gray-400 text-xs text-white textChange font-medium md:ml-[4%]">PARTNERSHIP</p>
+                    <p className="xs:text-3xl xs:ml-[10%] font-extrabold text-white textChange md:ml-[4%]">50&nbsp;+</p>
+                    <p className="xs:mt-3 xs:ml-[-10%] text-gray-400 text-xs text-white textChange font-medium md:ml-[4%] md:text-[100%]">PARTNERSHIP</p>
                 </div>
 
                 {/* BUSINESS */}
                 <div className="p-6">
-                    <p className="text-4xl font-extrabold text-white textChange md:ml-[4%]">8 Y</p>
-                    <p className="mt-2 text-gray-400 text-xs text-white textChange font-medium md:ml-[4%]">BUSINESS</p>
+                    <p className="xs:text-3xl font-extrabold text-white textChange md:ml-[4%]">8 Y</p>
+                    <p className="xs:mt-3 text-gray-400 text-xs text-white textChange font-medium md:ml-[4%] md:text-[100%]">BUSINESS</p>
                 </div>
 
                 <div className="w-[210%] ml-[45%]">

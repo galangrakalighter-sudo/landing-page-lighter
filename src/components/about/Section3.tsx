@@ -21,11 +21,11 @@ const Section3 = () => {
                 </div>
               </div> */}
 
-              <h2 className="sm:text-5xl md:text-6xl lg:text-6xl font-extrabold mb-6 text-white textChange uppercase font-[Arial,Helvetica,sans-serif]">
+              <h2 className="xs:text-3xl sm:text-3xl md:text-6xl lg:text-6xl font-extrabold mb-6 text-white textChange uppercase font-[Arial,Helvetica,sans-serif]">
                 OUR VISION
               </h2>
 
-              <p className="max-w-2xl text-lg md:text-xl md:ml-[3%] opacity-80 leading-relaxed mt-6 text-white textChange font-[Arial,Helvetica,sans-serif]">
+              <p className="xs:text-2xl sm:text-2xl md:text-xl md:ml-[3%] opacity-80 leading-relaxed mt-6 text-white textChange font-[Arial,Helvetica,sans-serif]">
                 Provider media digital yang memberikan keuntungan bagi pengguna jasa-nya
                 dan menjadi perusahaan media digital terbaik di Bandung
               </p>
@@ -41,20 +41,20 @@ const Section3 = () => {
                 </div>
               </div> */}
 
-              <h2 className="text-5xl md:text-6xl font-extrabold mb-8 tracking-tight uppercase font-[Arial,Helvetica,sans-serif]">
+              <h2 className="xs:text-3xl sm:text-3xl md:text-6xl font-extrabold mb-8 tracking-tight uppercase font-[Arial,Helvetica,sans-serif]">
                 OUR MISSION
               </h2>
 
-              <ul className="text-lg md:text-xl opacity-80 leading-relaxed space-y-4 max-w-3xl pl-5">
-                <li className="font-[Arial,Helvetica,sans-serif]">• Membangun organisasi yang profesional dan excellent service</li>
-                <li className="font-[Arial,Helvetica,sans-serif]">
+              <ul className="xs:text-3xl text-lg md:text-xl opacity-80 leading-relaxed space-y-4 max-w-3xl pl-5">
+                <li className="xs:text-2xl font-[Arial,Helvetica,sans-serif]">• Membangun organisasi yang profesional dan excellent service</li>
+                <li className="xs:text-2xl font-[Arial,Helvetica,sans-serif]">
                   • Melakukan riset dan development dalam menghadapi tantangan 2025,
                   menyediakan tempat produksi yang lebih besar dan layak untuk meningkatkan kualitas jasa
                 </li>
-                <li className="font-[Arial,Helvetica,sans-serif]">
+                <li className="xs:text-2xl font-[Arial,Helvetica,sans-serif]">
                   • Upgrade peralatan digital yang sesuai perkembangan
                 </li>
-                <li className="font-[Arial,Helvetica,sans-serif]">• Meningkatkan omset hingga 1000%</li>
+                <li className="xs:text-2xl font-[Arial,Helvetica,sans-serif]">• Meningkatkan omset hingga 1000%</li>
               </ul>
             </div>
           </div>

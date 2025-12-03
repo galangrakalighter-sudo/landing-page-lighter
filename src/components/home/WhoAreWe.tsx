@@ -37,8 +37,8 @@ const WhoAreWe = () => {
       {/* WHO WE ARE */}
       <div className="w-full md:w-1/2">
         <div className="p-6 tracking-widest rounded-xl">
-          <h3 className="text-xl font-bold text-white mb-3 textChange font-[Arial,Helvetica,sans-serif]">WHO WE ARE?</h3>
-          <p className="text-white textChange font-[Arial,Helvetica,sans-serif]">
+          <h3 className="text-xl lg:text-3xl font-bold text-white mb-3 textChange font-[Arial,Helvetica,sans-serif]">WHO WE ARE?</h3>
+          <p className="text-white lg:text-xl textChange font-[Arial,Helvetica,sans-serif]">
             Lighter Media Group menjadi <strong>partner</strong> digital dalam membangun media digital bagi bisnis.
           </p>
         </div>
@@ -47,8 +47,8 @@ const WhoAreWe = () => {
       {/* WHAT WE DO */}
       <div className="w-full md:w-1/2">
         <div className="p-6 tracking-widest rounded-xl">
-          <h3 className="text-xl font-bold text-white textChange mb-3 font-[Arial,Helvetica,sans-serif]">WHAT WE DO?</h3>
-          <p className="text-white textChange font-[Arial,Helvetica,sans-serif]">
+          <h3 className="text-xl lg:text-3xl font-bold text-white textChange mb-3 font-[Arial,Helvetica,sans-serif]">WHAT WE DO?</h3>
+          <p className="text-white lg:text-xl textChange font-[Arial,Helvetica,sans-serif]">
             Lighter Media Group adalah perusahaan yang bergerak di bidang jasa media digital yang mengutamakan <strong>excellent service</strong> sebagai <strong>value</strong> utama.
           </p>
         </div>

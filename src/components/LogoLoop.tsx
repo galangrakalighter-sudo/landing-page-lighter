@@ -162,7 +162,7 @@ const useAnimationLoop = (
 
         const transformValue = isVertical
           ? `translate3d(0, ${-offsetRef.current}px, 0)`
-          : `translate3d(${-offsetRef.current}px, 0, 0)`;
+          : `translate3d(${-offsetRef.current}px, 0, 100px)`;
         track.style.transform = transformValue;
       }
 
@@ -375,7 +375,7 @@ export const LogoLoop = React.memo<LogoLoopProps>(
 
     return (
       <div ref={containerRef} className={rootClassName} style={containerStyle} role="region" aria-label={ariaLabel}>
-        <div className="logoloop__track" ref={trackRef} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <div className="logoloop__track" ref={trackRef}>
           {logoLists}
         </div>
       </div>

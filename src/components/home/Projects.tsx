@@ -14,7 +14,7 @@ const Projects = () => {
       <div className="max-w-full mx-auto flex flex-col md:flex-row items-start md:items-center gap-10 md:gap-5 md:w-full">
 
         {/* LEFT TEXT */}
-        <div className="flex-1 mx-auto md:ml-[16%]">
+        <div className="flex-1 mx-auto md:ml-[16%] xl:ml-[9%]">
           <h1 className="font-extrabold leading-none mt-2 sm:mt-2 text-5xl sm:text-left md:text-left md:text-8xl font-[Arial,Helvetica,sans-serif]">
             OUR
           </h1>

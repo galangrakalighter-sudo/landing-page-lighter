@@ -16,7 +16,7 @@ const Section4 = () => {
     return (
         <>
             <section>
-                <div className="max-w-8xl mx-auto px-4 pt-[6%] text-center bg-[#161616]" id="coreValue">
+                <div className="px-10 pt-[6%] xs:h-[370vw] sm:h-[140vw] md:h-[90vw] lg:h-[52vw] xl:h-[40vw] text-center bg-[#161616]" id="coreValue">
                     {/* <div className="absolute sm:ml-[65%] sm:mt-[-5%] md:ml-[65%] md:mt-[-1%] lg:mt-[1%] xl:ml-[60%] w-32">
                     <div className="grid grid-cols-6     gap-2">
                         {Array.from({ length: 36 }).map((_, i) => (
@@ -24,12 +24,11 @@ const Section4 = () => {
                         ))}
                     </div>
                     </div> */}
-                    <h1 className="text-white sm:text-6xl md:text-6xl md:mt-[4%] lg:text-7xl text-white textChange font-[Arial,Helvetica,sans-serif]">
+                    <h1 className="text-white xs:text-4xl sm:text-6xl md:text-6xl md:mt-[4%] lg:text-7xl text-white textChange font-[Arial,Helvetica,sans-serif]">
                     CORE VALUE
                     </h1>
 
-                    <div className="sm:mt-[5%] sm:text-1xl md:mt-[3%] px-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 md:gap-10 lg:gap-10 xl:gap-10 place-items-center">
-
+                    <div className="xs:mt-[10%] gap-10 sm:mt-[10%] sm:text-2xl md:mt-[7%] px-6 grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:gap-1 lg:gap-10 lg:grid-cols-5 xl:gap-10 place-items-center">
                         {values.map((item, index) => (
                         <div key={index} className="flex flex-col items-center space-y-4">
                             

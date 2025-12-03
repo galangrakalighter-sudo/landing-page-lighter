@@ -19,27 +19,22 @@ const WhyDigital: React.FC = () => {
           <img src={Phone} alt="Visual Marketing Digital Mobile" className="block md:hidden w-[70%]"/>
 
           {/* Desktop Image */}
-          <img src={Phone} alt="Visual Marketing Digital Desktop" className="hidden md:block w-[90%] mr-[45%]"/>
+          <img src={Phone} alt="Visual Marketing Digital Desktop" className="hidden md:block w-[90%] mr-[15%]"/>
         </div>
       </div>
 
       {/* TEXT SECTION */}
       <div className="w-full md:w-1/2 text-center md:text-left">
         <div className="flex flex-col items-center md:items-start justify-center md:justify-start gap-y-2">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-0 whitespace-nowrap" id="gradienTeks1">
-            <GradientText colors={["#b6c9c0ff", "#606572ff", "#b6c9c0ff", "#606572ff", "#b6c9c0ff"]} animationSpeed={3} showBorder={false} className="custom-class font-[Arial,Helvetica,sans-serif]">KENAPA LIGHTER</GradientText>
-          </h1>
+            <GradientText colors={["#b6c9c0ff", "#606572ff", "#b6c9c0ff", "#606572ff", "#b6c9c0ff"]} animationSpeed={3} showBorder={false} className="custom-class font-[Arial,Helvetica,sans-serif] md:text-[5vw] md:mr-[10%] xl:text-[4vw] xl:mr-[21%]" id="gradienTeks1">KENAPA LIGHTER</GradientText>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-0 whitespace-nowrap font-[Arial,Helvetica,sans-serif]" id="teks_biasa1" style={{ display: "none" }}>
+          <h1 className="text-4xl sm:text-5xl md:text-[5vw] lg:text-7xl xl:text-[4vw] mb-0 whitespace-nowrap font-[Arial,Helvetica,sans-serif]" id="teks_biasa1" style={{ display: "none" }}>
             KENAPA LIGHTER
           </h1>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-0 whitespace-nowrap" id="gradienTeks2">
-            {/* MEDIA GROUP */}
-            <GradientText colors={["#b6c9c0ff", "#606572ff", "#b6c9c0ff", "#606572ff", "#b6c9c0ff"]} animationSpeed={3} showBorder={false} className="custom-class font-[Arial,Helvetica,sans-serif]">MEDIA GROUP</GradientText>
-          </h1>
+            <GradientText colors={["#b6c9c0ff", "#606572ff", "#b6c9c0ff", "#606572ff", "#b6c9c0ff"]} animationSpeed={3} showBorder={false} className="custom-class font-[Arial,Helvetica,sans-serif] md:text-[5vw] md:mr-[26%] md:mt-[-3%] xl:text-[4vw] xl:mr-[35%]" id='gradienTeks2'>MEDIA GROUP</GradientText>
           
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-0 whitespace-nowrap font-[Arial,Helvetica,sans-serif]" id="teks_biasa2" style={{ display: "none" }}>
+          <h1 className="text-4xl sm:text-5xl md:text-[5vw] lg:text-7xl xl:text-[4vw] mb-0 whitespace-nowrap font-[Arial,Helvetica,sans-serif] md:mt-[3%]" id="teks_biasa2" style={{ display: "none" }}>
             MEDIA GROUP
           </h1>
         </div>

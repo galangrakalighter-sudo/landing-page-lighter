@@ -2,42 +2,48 @@
 // import { Star } from "lucide-react";
 import { useState } from "react";
 import Image1 from "@/assets/home/image1-eksplor.png"
-import Image2 from "@/assets/home/image2-eksplor.png"
-import Image3 from "@/assets/home/image3-eksplor.png"
-import Image4 from "@/assets/home/image4-eksplor.png"
-import Image5 from "@/assets/home/image5-eksplor.png"
+import Image2 from "@/assets/home/File-Department_05.png"
+import Image3 from "@/assets/home/image5-eksplor.png"
+import Image4 from "@/assets/home/image2-eksplor.png"
+import Image5 from "@/assets/home/image4-eksplor.png"
 import FlipCard from "@/components/home/Card"
 import Card from "../Card";
+import { title } from "process";
 const divisions = [
   {
     id: "raddine",
-    title: "RADDINE.",
+    title: "BRANDING.",
+    front: "BRANDING",
     desc: `Partnership terpercaya Anda, memberikan excellent branding service. RADDINE adalah mitra strategis Anda dalam membangun identitas merek yang kuat.
            Kami menawarkan layanan konsultasi branding, desain logo, manajemen kampanye,
            dan strategi komunikasi untuk memastikan merek Anda menonjol di pasar`,
     image: Image1,
   },
   {
-    id: "multimedia",
-    title: "MULTIMEDIA.",
+    id: "digimark",
+    title: "LGTR DIGITAL MARKETING",
+    front: "DIGITAL MARKETING",
     desc: `Memberikan jasa dokumentasi terbaik untuk kebutuhan event Anda. Tim multimedia kami siap mengabadikan setiap momen penting dengan kualitas profesional.`,
     image: Image2,
   },
   {
     id: "digimark",
-    title: "LGTR DIGIMARK.",
+    title: "MCN.",
+    front: "MCN",
     desc: `Pelayanan jasa terbaik untuk digital marketing Anda. Tingkatkan kehadiran digital Anda dengan strategi marketing online yang efektif.`,
     image: Image3,
   },
   {
-    id: "academy",
-    title: "LIGHTER ACADEMY.",
+    id: "multimedia",
+    title: "MULTIMEDIA.",
+    front: "MULTIMEDIA",
     desc: `Memberikan pelatihan SDM berkualitas dengan skill yang teruji. Lighter Academy berkomitmen untuk mengembangkan talenta melalui program pelatihan.`,
     image: Image4,
   },
   {
-    id: "eikyo",
-    title: "EIKYO.",
+    id: "academy",
+    title: "LIGHTER ACADEMY.",
+    front: "ACADEMY",
     desc: `Memberikan management influencer dan talent yang terpercaya. EIKYO adalah platform manajemen influencer yang menghubungkan merek dengan talenta.`,
     image: Image5,
   },
@@ -61,30 +67,11 @@ const Jelajah = () => {
           DIVISION OF MEDIA GROUP
         </p>
 
-       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-  {divisions.map((item) => (
-        <FlipCard image={item.image}/>
-    // <div key={item.id} className="bg-neutral-primary-soft border border-default rounded-md shadow-xs p-6 flex flex-col justify-between">
-    //   <div>
-    //     <div className="w-full h-50 overflow-hidden rounded-md">
-    //       <img className="w-[65%] md:w-[100%] lg:w-[100%] mx-auto object-cover" src={item.image} alt={item.title} />
-    //     </div>
-
-    //     <h3 className="mt-6 mb-2 text-2xl font-semibold font-[Arial,Helvetica,sans-serif] text-center md:text-left">{item.title}</h3>
-    //     <p className="text-body font-[Arial,Helvetica,sans-serif] text-center md:text-left text-1xl">{item.desc}</p>
-    //   </div>
-
-    //   <div className="mt-6 text-center md:text-left">
-    //     <a href="#" className="inline-flex items-center text-body bg-neutral-secondary-medium border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading shadow-xs font-medium leading-5 rounded-md text-sm px-10 py-3">
-    //       Read more
-    //       <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24">
-    //         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14m-4-4 4 4-4 4"/>
-    //       </svg>
-    //     </a>
-    //   </div>
-    // </div>
-  ))}
-</div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+          {divisions.map((item) => (
+              <FlipCard image={item.image} product={item.title} text={item.desc} id={item.id} title={item.front}/>
+          ))}
+        </div>
 
 
 
