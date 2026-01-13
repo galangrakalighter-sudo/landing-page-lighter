@@ -100,7 +100,7 @@ const Footer = () => {
         </div>
     </section>
 
-    <footer className="bg-[#161616] text-white py-8 text-center textChange divChange">
+    <footer className="bg-[#161616] xs:mt-[-10%] md:mt-0 lg:mt-0 xl:mt-0 text-white py-8 text-center textChange divChange">
       <div className="max-w-7xl mx-auto px-4">
         <p>&copy; 2024 Lighter Media Group. LIGHT THE WORLD THROUGH MEDIA.</p>
       </div>

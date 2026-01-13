@@ -15,35 +15,35 @@ const Section4 = () => {
     ];
     return (
         <>
-            <section>
-                <div className="px-10 pt-[6%] xs:h-[370vw] sm:h-[140vw] md:h-[90vw] lg:h-[52vw] xl:h-[40vw] text-center bg-[#161616]" id="coreValue">
-                    {/* <div className="absolute sm:ml-[65%] sm:mt-[-5%] md:ml-[65%] md:mt-[-1%] lg:mt-[1%] xl:ml-[60%] w-32">
-                    <div className="grid grid-cols-6     gap-2">
-                        {Array.from({ length: 36 }).map((_, i) => (
-                        <div key={i} className="w-1 h-1 bg-white rounded-full opacity-60 titikDiv" />
-                        ))}
-                    </div>
-                    </div> */}
-                    <h1 className="text-white xs:text-4xl sm:text-6xl md:text-6xl md:mt-[4%] lg:text-7xl text-white textChange font-[Arial,Helvetica,sans-serif]">
-                    CORE VALUE
+            <section className="bg-[#161616] overflow-hidden">
+                <div className="px-6 py-16 md:py-24 lg:py-32 text-center bg-[#161616]" id="coreValue">
+                    
+                    <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold textChange font-[Arial,Helvetica,sans-serif] mb-12">
+                        CORE VALUE
                     </h1>
 
-                    <div className="xs:mt-[10%] gap-10 sm:mt-[10%] sm:text-2xl md:mt-[7%] px-6 grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:gap-1 lg:gap-10 lg:grid-cols-5 xl:gap-10 place-items-center">
+                    <div className="flex flex-nowrap overflow-x-auto md:overflow-x-auto snap-x snap-mandatory justify-start md:justify-start lg:justify-center gap-6 md:gap-10 pb-8 custom-scrollbar">
                         {values.map((item, index) => (
-                        <div key={index} className="flex flex-col items-center space-y-4">
-                            
-                            {/* Circle */}
-                            <div className="w-40 h-40 rounded-full bg-white flex items-center justify-center shadow-xl">
-                            <img src={item.img} alt={item.label} className="w-16 h-16" />
+                            <div 
+                                key={index} 
+                                className="flex flex-col items-center space-y-6 flex-shrink-0 w-[70%] sm:w-[40%] md:w-[30%] lg:w-[18%] snap-center transition-transform duration-300 hover:scale-105"
+                            >
+                                
+                                {/* Circle */}
+                                <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-white flex items-center justify-center shadow-[0_0_30px_rgba(255,255,255,0.1)]">
+                                    <img 
+                                        src={item.img} 
+                                        alt={item.label} 
+                                        className="w-20 h-20 sm:w-20 sm:h-20 object-contain" 
+                                    />
+                                </div>
+
+                                {/* Label */}
+                                <p className="text-white tracking-widest text-sm sm:text-base md:text-lg font-bold uppercase font-[Arial,Helvetica,sans-serif] textChange">
+                                    {item.label}
+                                </p>
                             </div>
-
-                            {/* Label */}
-                            <p className="text-white tracking-wide text-lg font-[Arial,Helvetica,sans-serif] textChange">
-                            {item.label}
-                            </p>
-                        </div>
                         ))}
-
                     </div>
                 </div>
             </section>

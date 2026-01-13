@@ -127,7 +127,8 @@ export default {
         "spinSlow": 'spinSlow 4s linear infinite',
       },
       screens : {
-        xs: "360px"
+        xs: "360px",
+        ll: "1428px"
       }
     },
     plugin: []

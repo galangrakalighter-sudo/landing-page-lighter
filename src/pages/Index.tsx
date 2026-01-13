@@ -17,7 +17,7 @@ const Index: React.FC = () => {
       <WhyDigital />
       <WhoAreWe />
       <Jelajah />
-      <Projects />
+      {/* <Projects /> */}
       <Maps />
       <Partnership />
       <Footer />

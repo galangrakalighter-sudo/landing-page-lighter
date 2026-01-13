@@ -1,151 +1,130 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react"; // Menambahkan Sun & Moon untuk toggle
 import { toggleTheme } from "@/components/home/Theme";
-import Logo from '@/assets/logo.jpg'
 
 const Navbar: React.FC = () => {
   const [open, setOpen] = useState<boolean>(false);
 
-  const navLinks = [
-  { name: "Home", href: "#" },
-  { name: "About Us", href: "#about" },
-  { name: "Eksplorasi", href: "#eksplorasi" },
-];
-
   useEffect(() => {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-      const form = document.getElementsByClassName("formContact");
-      for (let i = 0; i < form.length; i++) {
-          (form[i] as HTMLElement).style.color = "black";
-      }
+    document.documentElement.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+    const form = document.getElementsByClassName("formContact");
+    for (let i = 0; i < form.length; i++) {
+      (form[i] as HTMLElement).style.color = "black";
+    }
   }, []);
 
-   
+  // Data untuk isi Mega Menu
+  const productItems = [
+    { title: "Branding Agency", desc: "Connect with third-party tools that you're already using." },
+    { title: "Digital Marketing Agency", desc: "Connect with third-party tools that you're already using." },
+    { title: "E-Commerce Agency", desc: "Connect with third-party tools that you're already using." },
+    { title: "Tech Agency", desc: "Connect with third-party tools that you're already using." },
+    { title: "Event Organizer", desc: "Connect with third-party tools that you're already using." },
+    { title: "Multimedia", desc: "Connect with third-party tools that you're already using." },
+    { title: "Adacemy", desc: "Connect with third-party tools that you're already using." }
+  ];
+
   return (
     <>
       {/* NAVBAR */}
       <nav className={`fixed top-0 left-0 w-full z-50 bg-[#28292D]`}>
-        <div className="flex justify-between items-center px-8 py-4 text-white">
+        <div className="flex items-center px-8 py-4 text-white max-w-7xl mx-auto">
+          
+          {/* 1. SEBELAH KIRI: LOGO */}
+          <div className="flex-1 flex justify-start">
+            <a href="#home" className="text-2xl font-bold tracking-tighter italic">
+              LOGO
+            </a>
+          </div>
 
-          {/* Brand */}
-          <a href="#home" className="text-2xl font-semibold">
-            {/* <img src={Logo} alt="" style={{ width: "40%", marginLeft: "50%" }}/> */}
-          </a>
-
-          {/* Desktop Menu */}
-          <ul className="hidden md:flex items-center space-x-8">
-            <li><a href="/" className="hover:text-gray-300">Beranda</a></li>
-            <li><a href="/tentang" className="hover:text-gray-300">Tentang Kami</a></li>
-            <li><a href="#eksplorasi" className="hover:text-gray-300">Berita</a></li>
-           <li>
-              <div className="relative group">
-                <button className="dropButton px-4 py-2 flex items-center gap-2 text-white">
+          {/* 2. TENGAH: DESKTOP MENU */}
+          <div className="hidden md:flex flex-[2] justify-center">
+            <ul className="flex items-center space-x-8 font-medium">
+              <li><a href="/" className="hover:text-gray-400 transition">Beranda</a></li>
+              <li><a href="/tentang" className="hover:text-gray-400 transition">Tentang Kami</a></li>
+              
+              {/* DROPDOWN PRODUK (MEGA MENU) */}
+              <li className="relative group py-2">
+                <button className="flex items-center gap-2 text-white hover:text-gray-400 transition">
                   Produk
-                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className="w-4 h-4 text-gray-400 transition-transform duration-200 group-hover:rotate-180">
-                    <path fillRule="evenodd" clipRule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"/>
+                  <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 text-gray-400 transition-transform duration-200 group-hover:rotate-180">
+                    <path fillRule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clipRule="evenodd"/>
                   </svg>
                 </button>
-                <div className="dropdown-content absolute left-0 mt-2 w-48 bg-[#28292D] shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100  group-hover:visible transition-all duration-200 z-20">
-                  <a className="block px-4 py-2 hover:text-gray-300" href="#">Branding Agency</a>
-                  <a className="block px-4 py-2 hover:text-gray-300" href="#">Digital Marketing Agency</a>
-                  <a className="block px-4 py-2 hover:text-gray-300" href="#">E-Commmerce Agency</a>
-                  <a className="block px-4 py-2 hover:text-gray-300" href="#">Tech Agency</a>
-                  <a className="block px-4 py-2 hover:text-gray-300" href="#">Event Organizer</a>
-                  <a className="block px-4 py-2 hover:text-gray-300" href="#">Multimedia</a>
-                  <a className="block px-4 py-2 hover:text-gray-300" href="#">Academy</a>
+
+                {/* CONTAINER MEGA MENU */}
+                <div className="absolute left-1/2 -translate-x-1/2 mt-4 w-[800px] bg-[#0F1115] shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-800 p-8">
+                  <div className="grid grid-cols-3 gap-x-10 gap-y-8">
+                    {productItems.map((item, index) => (
+                      <a key={index} href="#" className="group/item block transition">
+                        <h3 className="text-white font-bold text-lg mb-1 group-hover/item:text-blue-400 transition">
+                          {item.title}
+                        </h3>
+                        <p className="text-gray-400 text-sm leading-snug">
+                          {item.desc}
+                        </p>
+                      </a>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li><a href="#contact" className="hover:text-gray-300 transition">Kontak</a></li>
+              </li>
+              
+              <li><a href="#eksplorasi" className="hover:text-gray-400 transition">Berita</a></li>
+              <li><a href="#contact" className="hover:text-gray-400 transition">Kontak</a></li>
+            </ul>
+          </div>
 
-            {/* Dark Mode Button */}
-            <li>
-            <button onClick={toggleTheme} className="relative w-16 h-8 flex items-center bg-gray-300 dark:bg-gray-600 rounded-full px-1 transition">
-              {/* Matahari untuk light */}
-              <span className="absolute left-9 text-yellow-400 dark:hidden z-20 text-lg">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
-                </svg>
-              </span>
+          {/* 3. SEBELAH KANAN: TOGGLE DARK MODE & MOBILE BUTTON */}
+          <div className="flex-1 flex justify-end items-center gap-4">
+            <div className="hidden md:block">
+              <button onClick={toggleTheme} className="relative w-14 h-7 flex items-center bg-gray-300 dark:bg-gray-600 rounded-full px-1 transition-colors duration-300 focus:outline-none">
+                <span className="absolute left-1.5 text-yellow-500 dark:opacity-0 transition-opacity duration-300">  
+                </span>
 
-              {/* Bulan untuk dark */}
-              <span className="absolute right-9 hidden dark:block text-white z-20 text-lg">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
-                </svg>
-              </span>
+                <span className="absolute right-1.5 text-blue-200 opacity-0 dark:opacity-100 transition-opacity duration-300">
+                </span>
 
-              {/* Slider */}
-              <span className="bg-white w-6 h-6 rounded-full shadow-md transform transition-transform duration-300 dark:translate-x-8 z-10"></span>
+                <span className="bg-white w-5 h-5 rounded-full shadow-md transform transition-transform duration-300 dark:translate-x-7 z-10"></span>
+              </button>
+            </div>
+
+            <button className="md:hidden text-white hover:text-gray-400 transition" onClick={() => setOpen(true)}>
+              <Menu size={28} />
             </button>
-          </li>
+          </div>
 
-          </ul>
-
-          {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden text-white"
-            onClick={() => setOpen(true)}
-          >
-            <Menu size={28} />
-          </button>
         </div>
       </nav>
 
-      {/* SIDEBAR OVERLAY */}
-      <div className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-40 transition-opacity ${ open ? "opacity-100 visible" : "opacity-0 invisible" }`} onClick={() => setOpen(false)}></div>
-
-      {/* SIDEBAR MENU */}
-      <div
-        className={`fixed top-0 right-0 h-full w-64 bg-gray-900 text-white z-50 p-6 transform transition-transform duration-300 ${
-          open ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        {/* Close Button */}
-        <button
-          className="absolute top-5 right-5 text-white"
-          onClick={() => setOpen(false)}
-        >
+      {/* SIDEBAR MOBILE */}
+      <div className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-40 transition-opacity ${ open ? "opacity-100 visible" : "opacity-0 invisible" }`} onClick={() => setOpen(false)}></div>
+      <div className={`fixed top-0 right-0 h-full w-72 bg-[#1e1f22] text-white z-50 p-6 transform transition-transform duration-300 ${ open ? "translate-x-0" : "translate-x-full" }`}>
+        <button className="absolute top-5 right-5 text-white" onClick={() => setOpen(false)}>
           <X size={28} />
         </button>
 
-        <ul className="mt-12 space-y-6 text-lg">
-          <li><a href="/" className="block hover:text-gray-300" onClick={() => setOpen(false)}>Home</a></li>
-          <li><a href="/tentang" className="block hover:text-gray-300" onClick={() => setOpen(false)}>Tentang Kami</a></li>
-          <li><a href="#eksplorasi" className="block hover:text-gray-300" onClick={() => setOpen(false)}>Berita</a></li>
+        <ul className="mt-12 space-y-6 text-lg border-t border-gray-700 pt-6">
+          <li><a href="/" onClick={() => setOpen(false)}>Home</a></li>
+          <li><a href="/tentang" onClick={() => setOpen(false)}>Tentang Kami</a></li>
           <li>
-              <div className="relative group">
-                <button className="dropButton py-1 flex items-center gap-2 text-white">
-                  Produk
-                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className="w-4 h-4 text-gray-400 transition-transform duration-200 group-hover:rotate-180">
-                    <path fillRule="evenodd" clipRule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"/>
-                  </svg>
-                </button>
-                <div className="dropdown-content absolute left-0 mt-2 w-48 bg-[#28292D] shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100  group-hover:visible transition-all duration-200 z-20">
-                  <a className="block px-4 py-2 hover:text-gray-300" onClick={() => setOpen(false)} href="#">Branding Agency</a>
-                  <a className="block px-4 py-2 hover:text-gray-300" onClick={() => setOpen(false)} href="#">Digital Marketing Agency</a>
-                  <a className="block px-4 py-2 hover:text-gray-300" onClick={() => setOpen(false)} href="#">E-Commmerce Agency</a>
-                  <a className="block px-4 py-2 hover:text-gray-300" onClick={() => setOpen(false)} href="#">Tech Agency</a>
-                  <a className="block px-4 py-2 hover:text-gray-300" onClick={() => setOpen(false)} href="#">Event Organizer</a>
-                  <a className="block px-4 py-2 hover:text-gray-300" onClick={() => setOpen(false)} href="#">Multimedia</a>
-                  <a className="block px-4 py-2 hover:text-gray-300" onClick={() => setOpen(false)} href="#">Academy</a>
-                </div>
-              </div>
-            </li>
-          <li>
-            <a href="#" className="block bg-black px-4 py-2 rounded-full border border-white shadow-sm hover:bg-gray-800 transition" onClick={() => setOpen(false)}>
-              Contact
-            </a>
+             <p className="text-gray-500 text-sm uppercase mb-3">Produk</p>
+             <div className="pl-4 space-y-4">
+                {productItems.slice(0, 7).map((item, idx) => (
+                  <a key={idx} href="#" className="block text-sm" onClick={() => setOpen(false)}>
+                    <span className="block font-bold">{item.title}</span>
+                  </a>
+                ))}
+             </div>
           </li>
-
-          <li>
-            <button onClick={toggleTheme} className="relative w-16 h-8 flex items-center bg-gray-300 dark:bg-gray-600 rounded-full p-1 transition">
-              <span className="absolute left-1 text-yellow-400 dark:hidden">☀</span>
-              <span className="absolute right-1 hidden dark:block text-white">🌙</span>
-
-              <span className="bg-white w-6 h-6 rounded-full shadow-md transform transition-transform duration-300 dark:translate-x-8"></span>
-            </button>
+          <li><a href="/kontak" onClick={() => setOpen(false)}>Kontak</a></li>
+          <li className="pt-4 border-t border-gray-700">
+             <div className="flex items-center justify-between">
+                <span>Mode Gelap</span>
+                <button onClick={toggleTheme} className="relative w-12 h-6 flex items-center bg-gray-600 rounded-full px-1">
+                   <span className="bg-white w-4 h-4 rounded-full transform transition-transform duration-300 dark:translate-x-6"></span>
+                </button>
+             </div>
           </li>
         </ul>
       </div>

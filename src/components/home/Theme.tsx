@@ -23,12 +23,12 @@ export const toggleTheme = () => {
   const About = document.getElementById("about")
 
   if(next == "light"){
-    About.classList.remove("bg-[radial-gradient(circle,rgba(0,0,0,0.73)_0%,rgba(130,130,130,0.33)_100%)]")
+    About.classList.remove("bg-[#161616]")
     About.classList.add("bg-white")
     About.style.color = "white"
   } else {
     About.classList.remove("bg-white")
-    About.classList.add("bg-[radial-gradient(circle,rgba(0,0,0,0.73)_0%,rgba(130,130,130,0.33)_100%)]")
+    About.classList.add("bg-[#161616]")
     About.style.color = "black"
   }
 
@@ -93,11 +93,15 @@ export const toggleTheme = () => {
   const btn = document.getElementById("button_read");
   
   if(next == "light"){
-    btn.classList.remove("border-white");
-    btn.classList.add("border-black");
+    btn.classList.remove("bg-white");
+    btn.classList.remove("text-black");
+    btn.classList.add("bg-black");
+    btn.classList.add("text-white");
   } else{
-    btn.classList.remove("border-black");
-    btn.classList.add("border-white");
+    btn.classList.remove("bg-black");
+    btn.classList.remove("text-white");
+    btn.classList.add("bg-white");
+    btn.classList.add("text-black");
   }
 
   if(next == "light"){

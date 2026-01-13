@@ -10,44 +10,46 @@ import Project7 from "@/assets/home/OurProject7.png"
 const Projects = () => {
   return (
     <>
-     <section className="w-full bg-[#161616] text-white py-16 sm:py-20 px-4 sm:px-8" id="ourproject">
-      <div className="max-w-full mx-auto flex flex-col md:flex-row items-start md:items-center gap-10 md:gap-5 md:w-full">
+      <section className="w-full bg-[#161616] text-white py-16 sm:py-24 px-6 md:px-12 overflow-hidden" id="ourproject">
+        <div className="max-w-full mx-auto flex flex-col md:flex-row items-center md:items-center gap-10 md:gap-5 md:w-full">
 
-        {/* LEFT TEXT */}
-        <div className="flex-1 mx-auto md:ml-[16%] xl:ml-[9%]">
-          <h1 className="font-extrabold leading-none mt-2 sm:mt-2 text-5xl sm:text-left md:text-left md:text-8xl font-[Arial,Helvetica,sans-serif]">
-            OUR
-          </h1>
+          {/* LEFT TEXT SECTION */}
+          <div className="w-full md:flex-1 md:ml-[16%] xl:ml-[9%] text-left">
+            {/* Ukuran teks diperkecil: text-4xl di HP hingga text-7xl di PC */}
+            <h1 className="font-extrabold leading-[0.85] text-4xl sm:text-6xl md:text-6xl lg:text-6xl font-[Arial,Helvetica,sans-serif] uppercase">
+              OUR
+            </h1>
 
-          <h1 className="font-extrabold leading-none mt-2 sm:mt-2 text-5xl sm:text-left md:text-left md:text-8xl font-[Arial,Helvetica,sans-serif]">
-            PROJECT
-          </h1>
+            <h1 className="font-extrabold leading-[0.85] text-4xl sm:text-6xl md:text-6xl lg:text-6xl font-[Arial,Helvetica,sans-serif] uppercase">
+              PROJECT
+            </h1>
 
-          {/* Explore link */}
-          <div className="mt-8 flex items-center gap-5 sm:flex">
-            <p className="tracking-[0.3em] text-xs sm:text-sm">
-              JELAJAHI &gt;&gt;
-            </p>
-            <div className="h-[1px] bg-white w-[120px] sm:w-[180px] md:w-[220px]" />
-          </div>
-        </div>
-
-
-        <div className="flex-1 w-full overflow-hidden flex justify-end md:mr-5">
-        <marquee behavior="scroll" direction="left" scrollamount={15} loop="infinite">
-            <div className="inline-flex gap-6">
-            <img src={Project1} className="h-30" />
-            <img src={Project2} className="h-30" />
-            <img src={Project3} className="h-30" />
-            <img src={Project4} className="h-30" />
-            <img src={Project5} className="h-30" />
-            <img src={Project6} className="h-30" />
-            <img src={Project7} className="h-30" />
+            {/* Explore link */}
+            <div className="mt-8 flex items-center gap-4 sm:gap-5">
+              <p className="tracking-[0.4em] text-[10px] sm:text-xs md:text-sm whitespace-nowrap">
+                JELAJAHI &gt;&gt;
+              </p>
+              <div className="h-[1px] bg-white w-full max-w-[100px] sm:max-w-[150px] md:max-w-[180px] opacity-70" />
             </div>
-        </marquee>
+          </div>
+
+          {/* RIGHT MARQUEE SECTION */}
+          <div className="w-full md:flex-1 overflow-hidden flex justify-end items-center md:mr-5">
+            <marquee behavior="scroll" direction="left" scrollamount={15} loop="infinite" className="py-4">
+              <div className="inline-flex items-center gap-6 md:gap-10">
+                <img src={Project1} className="h-20 md:h-28 w-auto object-contain" />
+                <img src={Project2} className="h-20 md:h-28 w-auto object-contain" />
+                <img src={Project3} className="h-20 md:h-28 w-auto object-contain" />
+                <img src={Project4} className="h-20 md:h-28 w-auto object-contain" />
+                <img src={Project5} className="h-20 md:h-28 w-auto object-contain" />
+                <img src={Project6} className="h-20 md:h-28 w-auto object-contain" />
+                <img src={Project7} className="h-20 md:h-28 w-auto object-contain" />
+              </div>
+            </marquee>
+          </div>
+          
         </div>
-      </div>
-    </section>
+      </section>
     </>
   );
 };

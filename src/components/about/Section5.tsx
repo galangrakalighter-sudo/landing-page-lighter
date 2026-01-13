@@ -45,7 +45,7 @@ const Section5 = () => {
         
         {/* LEFT TITLE */}
         <div>
-          <h1 className="xs:text-4xl sm:text-5xl md:text-6xl md:ml-[10%] lg:ml-[-1%] xl:text-7xl font-[Arial,Helvetica,sans-serif] text-white">
+          <h1 className="xs:text-4xl font-extrabold sm:text-5xl md:text-6xl md:ml-[10%] lg:ml-[-1%] lg:text-7xl xl:text-7xl font-[Arial,Helvetica,sans-serif] text-white">
             OURS CLIENT
           </h1>
 
@@ -53,7 +53,7 @@ const Section5 = () => {
 
         {/* RIGHT DESCRIPTION */}
         <div className="flex items-start">
-          <h5 className="xs:text-2xl sm:text-3xl md:text-2xl xl:text-4xl leading-relaxed sm:text-start md:text-end font-[Arial,Helvetica,sans-serif]">
+          <h5 className="xs:text-2xl sm:text-3xl md:text-2xl xl:text-3xl leading-relaxed sm:text-start md:text-end font-[Arial,Helvetica,sans-serif]">
             Berpengalaman melayani ratusan klien, kami memahami kebutuhan
             bisnis Anda secara mendalam.
           </h5>
@@ -67,16 +67,6 @@ const Section5 = () => {
       <div className="mx-auto flex flex-warp justify-center gap-12 py-12 w-full">
         <LogoLoop logos={imageLogos} speed={120} direction="left" logoHeight={120} gap={40} hoverSpeed={0} scaleOnHover ariaLabel="Technology partners"/>
       </div>
-
-        {/* <div className="w-full overflow-hidden py-12">
-          <marquee width="100%" direction="left" scrollamount={15}>
-            <div className="inline-flex gap-6">
-              {imageLogos.map((logo, i) => (
-                <img key={i} src={logo.src} />
-              ))}
-            </div>
-          </marquee>
-        </div> */}
 
       {/* BOTTOM LINE */}
       <div className=" mx-auto border-t border-white/30"></div>
