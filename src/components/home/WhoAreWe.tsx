@@ -116,7 +116,15 @@ const WhoAreWe = () => {
 
       {/* BUSINESS */}
       <div className="p-6">
-          <p className="text-xl md:text-4xl lg:text-4xl text-white textChange md:ml-[4%]"><Counter end={8} suffix=" Tahun" /></p>
+          <div className="text-xl md:text-4xl lg:text-4xl text-white textChange md:ml-[4%]">
+              {/* Angka 8 menjadi Bold */}
+              <span className="font-extrabold">
+                  <Counter end={8} />
+              </span>
+              
+              {/* Teks Huruf tidak Bold (font-normal) */}
+              <span className="font-normal ml-2">Tahun</span>
+          </div>
           <p className="mt-2 text-gray-400 text-xl md:text-2xl lg:text-2xl text-white textChange font-medium md:ml-[4%]">Bisnis</p>
       </div>
 
