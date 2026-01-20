@@ -77,43 +77,40 @@ const Section2 = () => {
                     </div>
 
                     {/* STATISTICS SECTION */}
-                    <div className="grid grid-cols-3 xs:pt-[10%] sm:pt-[12%]  text-center md:pt-[5%] relative">
-                        
-                        {/* CLIENT */}
-                        <div className="p-2 sm:p-6">
-                            <p className="text-2xl xs:text-3xl xs:ml-[-10%] font-extrabold sm:ml-[12%] md:mr-[18%] lg:mr-[7%] text-white textChange">
-                                <Counter end={100} suffix=" +" />
-                            </p>
-                            <p className="mt-1 xs:mt-3 xs:mr-[5%] text-gray-400 text-[10px] sm:text-xs text-white textChange font-medium md:mr-[3%] md:text-[100%]">
-                                CLIENT
-                            </p>
-                        </div>
+                    <div className="grid grid-cols-3 text-center mt-10">
 
-                        {/* PARTNERSHIP */}
-                        <div className="p-2 sm:p-6">
-                            <p className="text-2xl xs:text-3xl xs:ml-[10%] font-extrabold text-white textChange md:ml-[4%]">
-                                <Counter end={50} suffix=" +" />
-                            </p>
-                            <p className="mt-1 xs:mt-3 xs:ml-[-10%] sm:ml-[1%] text-gray-400 text-[10px] sm:text-xs text-white textChange font-medium md:ml-[4%] md:text-[100%]">
-                                PARTNERSHIP
-                            </p>
-                        </div>
+                    {/* CLIENT */}
+                    <div className="p-6">
+                        <p className="text-xl md:text-4xl lg:text-4xl font-extrabold text-white textChange md:ml-[5%]"><Counter end={100} suffix=" +" /></p>
+                        <p className="mt-2 text-gray-400 text-xl md:text-2xl lg:text-2xl text-white textChange font-medium md:mr-[3%]">Klien</p>
+                    </div>
 
-                        {/* BUSINESS */}
-                        <div className="p-2 sm:p-6">
-                            <p className="text-2xl xs:text-3xl font-extrabold text-white textChange md:ml-[4%]">
-                                <Counter end={8} suffix=" Y" />
-                            </p>
-                            <p className="mt-1 xs:mt-3 text-gray-400 text-[10px] sm:text-xs text-white textChange font-medium md:ml-[4%] md:text-[100%]">
-                                BUSINESS
-                            </p>
-                        </div>
+                    {/* PARTNERSHIP */}
+                    <div className="p-6">
+                        <p className="text-xl md:text-4xl lg:text-4xl font-extrabold text-white textChange md:ml-[4%]"><Counter end={50} suffix=" +" /></p>
+                        <p className="mt-2 text-gray-400 text-xl md:text-2xl lg:text-2xl text-white textChange font-medium md:ml-[4%]">Kemitraan</p>
+                    </div>
 
-                        {/* DECORATIVE LINE (GARIS) */}
-                       <div className="w-[210%] ml-[45%]">
-                            <img src={Garis} className="w-full" id="garisPutih"/>
-                            <img src={Garis_Hitam} className="w-full" id="garisHitam" style={{ display: "none"}}/>
+                    {/* BUSINESS */}
+                    <div className="p-6">
+                        <div className="text-xl md:text-4xl lg:text-4xl text-white textChange md:ml-[4%]">
+                            {/* Angka 8 menjadi Bold */}
+                            <span className="font-extrabold">
+                                <Counter end={8} />
+                            </span>
+                            
+                            {/* Teks Huruf tidak Bold (font-normal) */}
+                            <span className="font-normal ml-2">Tahun</span>
                         </div>
+                        <p className="mt-2 text-gray-400 text-xl md:text-2xl lg:text-2xl text-white textChange font-medium md:ml-[4%]">Bisnis</p>
+                    </div>
+
+                    <div className="w-[210%] ml-[45%]">
+                        <img src={Garis} className="w-full" id="garisPutih"/>
+                        <img src={Garis_Hitam} className="w-full" id="garisHitam" style={{ display: "none"}}/>
+                    </div>
+
+
                     </div>
                 </div>
             </section>

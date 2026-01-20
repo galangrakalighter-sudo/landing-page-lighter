@@ -28,56 +28,55 @@ const Navbar: React.FC = () => {
   return (
     <>
       {/* NAVBAR */}
-      <nav className="fixed top-0 left-0 w-full z-50 bg-[#28292D]">
-        <div className="flex items-center px-8 py-4 text-white max-w-7xl mx-auto">
-          
-          {/* 1. SEBELAH KIRI: LOGO */}
-          <div className="flex-1 flex justify-start">
-            <a href="/" className="text-2xl font-bold tracking-tighter italic">
-              <img src={Logo} className="h-12 w-auto xs:mx-auto" alt="Logo" />
-            </a>
-          </div>
+        <nav className={`fixed top-0 left-0 w-full z-50 bg-[#28292D]`}>
+          <div className="flex items-center px-8 py-4 text-white max-w-7xl mx-auto">
+            
+            {/* 1. SEBELAH KIRI: LOGO */}
+            <div className="flex-1 flex justify-start">
+              <a href="#home" className="text-2xl font-bold tracking-tighter italic">
+                <img src={Logo} className="h-12 w-auto xs:mx-auto" alt="Logo" />
+              </a>
+            </div>
 
-          {/* 2. TENGAH: DESKTOP MENU */}
-          <div className="hidden md:flex flex-[2] justify-center">
-            <ul className="flex items-center space-x-8 font-medium">
-              <li><a href="/" className="hover:text-gray-400 transition">Beranda</a></li>
-              <li><a href="/tentang" className="hover:text-gray-400 transition">Tentang Kami</a></li>
-              
-              {/* DROPDOWN PRODUK (MEGA MENU) */}
-              <li className="relative group py-2">
-                <button className="flex items-center gap-2 text-white hover:text-gray-400 transition">
-                  Produk
-                  <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 text-gray-400 transition-transform duration-200 group-hover:rotate-180">
-                    <path fillRule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clipRule="evenodd"/>
-                  </svg>
-                </button>
+            {/* 2. TENGAH: DESKTOP MENU */}
+            <div className="hidden md:flex justify-center">
+              <ul className="flex items-center space-x-8 font-medium">
+                <li><a href="/" className="hover:text-gray-400 transition">Beranda</a></li>
+                <li><a href="/tentang" className="hover:text-gray-400 transition">Tentang Kami</a></li>
+                
+                <li className="relative group py-2">
+                  <button className="flex items-center gap-2 text-white hover:text-gray-400 transition">
+                    Produk
+                    <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 text-gray-400 transition-transform duration-200 group-hover:rotate-180">
+                      <path fillRule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clipRule="evenodd"/>
+                    </svg>
+                  </button>
 
-                {/* Tampilan Mega Menu */}
-                <div className="absolute left-1/2 -translate-x-1/2 mt-4 w-[800px] bg-[#0F1115] shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-800 p-8">
-                  <div className="grid grid-cols-3 gap-x-10 gap-y-8">
-                    {productItems.map((item, index) => (
-                      <a key={index} href="#" className="group/item block transition">
-                        <h3 className="text-white font-bold text-lg mb-1 group-hover/item:text-blue-400 transition uppercase">
-                          {item.title}
-                        </h3>
-                        <p className="text-gray-500 text-sm leading-snug">
-                          {item.desc}
-                        </p>
-                      </a>
-                    ))}
+                  <div className="absolute left-1/2 -translate-x-1/2 mt-4 w-[800px] bg-[#0F1115] shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-800 p-8">
+                    <div className="grid grid-cols-3 gap-x-10 gap-y-8">
+                      {productItems.map((item, index) => (
+                        <a key={index} href="#" className="group/item block transition">
+                          <h3 className="text-white font-bold text-lg mb-1 group-hover/item:text-blue-400 transition">
+                            {item.title}
+                          </h3>
+                          <p className="text-gray-400 text-sm leading-snug">
+                            {item.desc}
+                          </p>
+                        </a>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              </li>
-              
-              <li><a href="#eksplorasi" className="hover:text-gray-400 transition">Berita</a></li>
-              <li><a href="#contact" className="hover:text-gray-400 transition">Kontak</a></li>
-            </ul>
-          </div>
+                </li>
+                
+                <li><a href="#eksplorasi" className="hover:text-gray-400 transition">Berita</a></li>
+                <li><a href="#contact" className="hover:text-gray-400 transition">Kontak</a></li>
+              </ul>
+            </div>
+            <div className="flex-1 hidden md:block"></div>
 
-          {/* 3. SEBELAH KANAN: TOGGLE DARK MODE & MOBILE BUTTON */}
-          <div className="flex-1 flex justify-end items-center gap-4">
-            {/* Dark Mode Toggle Desktop */}
+          </div>
+        </nav>
+          {/* <div className="flex-1 flex justify-end items-center gap-4">
             <div className="hidden md:block">
               <button onClick={toggleTheme} className="relative w-14 h-7 flex items-center bg-gray-300 dark:bg-gray-600 rounded-full px-1 transition-colors duration-300 focus:outline-none">
                 <span className="absolute left-1.5 text-yellow-500 dark:opacity-0 transition-opacity duration-300">  
@@ -90,14 +89,10 @@ const Navbar: React.FC = () => {
               </button>
             </div>
 
-            {/* Tombol Menu Mobile */}
             <button className="md:hidden text-white hover:text-gray-400 transition" onClick={() => setOpen(true)}>
               <Menu size={28} />
             </button>
-          </div>
-
-        </div>
-      </nav>
+          </div> */}
 
       {/* SIDEBAR MOBILE */}
       <div className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-40 transition-opacity ${ open ? "opacity-100 visible" : "opacity-0 invisible" }`} onClick={() => setOpen(false)}></div>

@@ -40,12 +40,11 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* 2. TENGAH: DESKTOP MENU */}
-          <div className="hidden md:flex flex-[2] justify-center">
+          <div className="hidden md:flex justify-center">
             <ul className="flex items-center space-x-8 font-medium">
               <li><a href="/" className="hover:text-gray-400 transition">Beranda</a></li>
               <li><a href="/tentang" className="hover:text-gray-400 transition">Tentang Kami</a></li>
               
-              {/* DROPDOWN PRODUK (MEGA MENU) */}
               <li className="relative group py-2">
                 <button className="flex items-center gap-2 text-white hover:text-gray-400 transition">
                   Produk
@@ -54,7 +53,6 @@ const Navbar: React.FC = () => {
                   </svg>
                 </button>
 
-                {/* CONTAINER MEGA MENU */}
                 <div className="absolute left-1/2 -translate-x-1/2 mt-4 w-[800px] bg-[#0F1115] shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-800 p-8">
                   <div className="grid grid-cols-3 gap-x-10 gap-y-8">
                     {productItems.map((item, index) => (
@@ -75,9 +73,12 @@ const Navbar: React.FC = () => {
               <li><a href="#contact" className="hover:text-gray-400 transition">Kontak</a></li>
             </ul>
           </div>
+          <div className="flex-1 hidden md:block"></div>
 
+        </div>
+      </nav>
           {/* 3. SEBELAH KANAN: TOGGLE DARK MODE & MOBILE BUTTON */}
-          <div className="flex-1 flex justify-end items-center gap-4">
+          {/* <div className="flex-1 flex justify-end items-center gap-4">
             <div className="hidden md:block">
               <button onClick={toggleTheme} className="relative w-14 h-7 flex items-center bg-gray-300 dark:bg-gray-600 rounded-full px-1 transition-colors duration-300 focus:outline-none">
                 <span className="absolute left-1.5 text-yellow-500 dark:opacity-0 transition-opacity duration-300">  
@@ -93,10 +94,7 @@ const Navbar: React.FC = () => {
             <button className="md:hidden text-white hover:text-gray-400 transition" onClick={() => setOpen(true)}>
               <Menu size={28} />
             </button>
-          </div>
-
-        </div>
-      </nav>
+          </div> */}
 
       {/* SIDEBAR MOBILE */}
       <div className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-40 transition-opacity ${ open ? "opacity-100 visible" : "opacity-0 invisible" }`} onClick={() => setOpen(false)}></div>
@@ -119,14 +117,14 @@ const Navbar: React.FC = () => {
              </div>
           </li>
           <li><a href="/kontak" onClick={() => setOpen(false)}>Kontak</a></li>
-          <li className="pt-4 border-t border-gray-700">
+          {/* <li className="pt-4 border-t border-gray-700">
              <div className="flex items-center justify-between">
                 <span>Mode Gelap</span>
                 <button onClick={toggleTheme} className="relative w-12 h-6 flex items-center bg-gray-600 rounded-full px-1">
                    <span className="bg-white w-4 h-4 rounded-full transform transition-transform duration-300 dark:translate-x-6"></span>
                 </button>
              </div>
-          </li>
+          </li> */}
         </ul>
       </div>
     </>
