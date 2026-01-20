@@ -53,7 +53,12 @@ const WhyDigital: React.FC = () => {
               </div>
 
               <p className="mt-6 md:mt-4 text-white mx-auto md:mx-0 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl font-[Arial,Helvetica,sans-serif]" id='paragraf_sec1'>
-                Lighter Media Group bukan sekadar penyedia jasa digital. Kami adalah ekosistem media terintegrasi yang memahami bahwa Landscape Digital Berubah dan Brand Harus Mengikuti. Dengan kanal media yang kami kelola sendiri, termasuk platform news sebagai generator traffic, kami tidak hanya membuat brand terlihat kami menempatkannya tepat di pusat perhatian digital
+                Lighter Media Group bekerja sebagai ekosistem media digital terintegrasi.
+                Kami menaungi berbagai kanal media dan layanan digital dalam satu sistem.
+                LMG membantu brand hadir dan berkembang di ruang digital yang terus berubah.
+                Bukan sekadar tampil, tapi ditempatkan di konteks yang tepat.
+                Kami tidak berdiri sebagai vendor satu layanan.
+                Lighter Media Group adalah partner media digital untuk pertumbuhan jangka panjang
               </p>
 
               <div className="flex justify-center md:justify-start">

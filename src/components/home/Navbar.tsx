@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, Sun, Moon } from "lucide-react"; // Menambahkan Sun & Moon untuk toggle
 import { toggleTheme } from "@/components/home/Theme";
+import Logo from '@/assets/Home/logo.jpg'
 
 const Navbar: React.FC = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -22,7 +23,7 @@ const Navbar: React.FC = () => {
     { title: "Tech Agency", desc: "Connect with third-party tools that you're already using." },
     { title: "Event Organizer", desc: "Connect with third-party tools that you're already using." },
     { title: "Multimedia", desc: "Connect with third-party tools that you're already using." },
-    { title: "Adacemy", desc: "Connect with third-party tools that you're already using." }
+    { title: "Academy", desc: "Connect with third-party tools that you're already using." }
   ];
 
   return (
@@ -34,7 +35,7 @@ const Navbar: React.FC = () => {
           {/* 1. SEBELAH KIRI: LOGO */}
           <div className="flex-1 flex justify-start">
             <a href="#home" className="text-2xl font-bold tracking-tighter italic">
-              LOGO
+              <img src={Logo} className="h-12 w-auto xs:mx-auto" alt="Logo" />
             </a>
           </div>
 

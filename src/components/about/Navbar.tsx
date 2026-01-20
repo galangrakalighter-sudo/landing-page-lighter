@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { toggleTheme } from "@/components/about/Theme";
-
+import Logo from '@/assets/Home/logo.jpg'
 const Navbar: React.FC = () => {
   const [open, setOpen] = useState<boolean>(false);
 
@@ -16,15 +16,13 @@ const Navbar: React.FC = () => {
 
   // Data untuk Mega Menu Produk
   const productItems = [
-    { title: "Online Stores", desc: "Connect with third-party tools that you're already using." },
-    { title: "Segmentation", desc: "Connect with third-party tools that you're already using." },
-    { title: "Marketing CRM", desc: "Connect with third-party tools that you're already using." },
     { title: "Branding Agency", desc: "Connect with third-party tools that you're already using." },
-    { title: "Digital Marketing", desc: "Connect with third-party tools that you're already using." },
+    { title: "Digital Marketing Agency", desc: "Connect with third-party tools that you're already using." },
     { title: "E-Commerce Agency", desc: "Connect with third-party tools that you're already using." },
-    { title: "Audience Management", desc: "Connect with third-party tools that you're already using." },
-    { title: "Creative Tools", desc: "Connect with third-party tools that you're already using." },
-    { title: "Marketing Automation", desc: "Connect with third-party tools that you're already using." },
+    { title: "Tech Agency", desc: "Connect with third-party tools that you're already using." },
+    { title: "Event Organizer", desc: "Connect with third-party tools that you're already using." },
+    { title: "Multimedia", desc: "Connect with third-party tools that you're already using." },
+    { title: "Academy", desc: "Connect with third-party tools that you're already using." }
   ];
 
   return (
@@ -36,7 +34,7 @@ const Navbar: React.FC = () => {
           {/* 1. SEBELAH KIRI: LOGO */}
           <div className="flex-1 flex justify-start">
             <a href="/" className="text-2xl font-bold tracking-tighter italic">
-              LOGO
+              <img src={Logo} className="h-12 w-auto xs:mx-auto" alt="Logo" />
             </a>
           </div>
 

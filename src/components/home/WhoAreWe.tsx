@@ -80,9 +80,9 @@ const WhoAreWe = () => {
       {/* WHO WE ARE */}
       <div className="w-full md:w-1/2">
         <div className="p-6 tracking-widest rounded-xl">
-          <h3 className="text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-3 textChange font-[Arial,Helvetica,sans-serif]">WHO WE ARE?</h3>
+          <h3 className="text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-3 textChange font-[Arial,Helvetica,sans-serif]">SIAPA KAMI?</h3>
           <p className="text-white sm:text-xl md:text-2xl lg:text-xl textChange font-[Arial,Helvetica,sans-serif]">
-            Lighter Media Group menjadi <strong>partner</strong> digital dalam membangun media digital bagi bisnis.
+            Lighter Media Group adalah ekosistem media digital terintegrasi untuk bisnis. <br />Kami membantu brand membangun dan mengelola kehadiran digital melalui sistem media yang saling terhubung
           </p>
         </div>
       </div>
@@ -90,9 +90,9 @@ const WhoAreWe = () => {
       {/* WHAT WE DO */}
       <div className="w-full md:w-1/2">
         <div className="p-6 tracking-widest rounded-xl">
-          <h3 className="text-3xl md:text-5xl lg:text-5xl font-bold text-white textChange mb-3 font-[Arial,Helvetica,sans-serif]">WHAT WE DO?</h3>
+          <h3 className="text-3xl md:text-5xl lg:text-5xl font-bold text-white textChange mb-3 font-[Arial,Helvetica,sans-serif]">APA YANG KAMI LAKUKAN?</h3>
           <p className="text-white sm:text-xl md:text-2xl lg:text-xl textChange font-[Arial,Helvetica,sans-serif]">
-            Lighter Media Group adalah perusahaan yang bergerak di bidang jasa media digital yang mengutamakan <strong>excellent service</strong> sebagai <strong>value</strong> utama.
+            Kami mengelola media digital dalam satu ekosistem terintegrasi. <br /> Strategi, konten, kanal distribusi, dan penguatan brand saling terhubung untuk mendukung pertumbuhan bisnis
           </p>
         </div>
       </div>
@@ -104,20 +104,20 @@ const WhoAreWe = () => {
 
       {/* CLIENT */}
       <div className="p-6">
-          <p className="text-4xl font-extrabold text-white textChange md:ml-[5%]"><Counter end={100} suffix=" +" /></p>
-          <p className="mt-2 text-gray-400 text-xs text-white textChange font-medium md:mr-[3%]">CLIENT</p>
+          <p className="text-xl md:text-4xl lg:text-4xl font-extrabold text-white textChange md:ml-[5%]"><Counter end={100} suffix=" +" /></p>
+          <p className="mt-2 text-gray-400 text-xl md:text-2xl lg:text-2xl text-white textChange font-medium md:mr-[3%]">Klien</p>
       </div>
 
       {/* PARTNERSHIP */}
       <div className="p-6">
-          <p className="text-4xl font-extrabold text-white textChange md:ml-[4%]"><Counter end={50} suffix=" +" /></p>
-          <p className="mt-2 text-gray-400 text-xs text-white textChange font-medium md:ml-[4%]">PARTNERSHIP</p>
+          <p className="text-xl md:text-4xl lg:text-4xl font-extrabold text-white textChange md:ml-[4%]"><Counter end={50} suffix=" +" /></p>
+          <p className="mt-2 text-gray-400 text-xl md:text-2xl lg:text-2xl text-white textChange font-medium md:ml-[4%]">Kemitraan</p>
       </div>
 
       {/* BUSINESS */}
       <div className="p-6">
-          <p className="text-4xl font-extrabold text-white textChange md:ml-[4%]"><Counter end={8} suffix=" Y" /></p>
-          <p className="mt-2 text-gray-400 text-xs text-white textChange font-medium md:ml-[4%]">BUSINESS</p>
+          <p className="text-xl md:text-4xl lg:text-4xl text-white textChange md:ml-[4%]"><Counter end={8} suffix=" Tahun" /></p>
+          <p className="mt-2 text-gray-400 text-xl md:text-2xl lg:text-2xl text-white textChange font-medium md:ml-[4%]">Bisnis</p>
       </div>
 
       <div className="w-[210%] ml-[45%]">

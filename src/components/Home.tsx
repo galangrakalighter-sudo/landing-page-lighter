@@ -16,10 +16,10 @@ const Home = () => {
 
   
 
-  <div className="textImage absolute inset-0 w-full h-full object-cover xs:mt-[30%] sm:mt-[20%] md:mt-[15%] lg:mt-[8%]">
+  {/* <div className="textImage absolute inset-0 w-full h-full object-cover xs:mt-[30%] sm:mt-[20%] md:mt-[15%] lg:mt-[8%]">
     <img src={Logo} className="xs:mx-auto"/>
     <h1 className="xs:mt-[20%] xs:text-center md:mt-[5%] font-[Arial,Helvetica,sans-serif] text-white">INTEGRATED DIGITAL ECOSYSTEM FOR BUSINESS GROWTH</h1>
-  </div>
+  </div> */}
 
 </div>
 
