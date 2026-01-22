@@ -27,7 +27,7 @@ const Footer = () => {
           {/* FORM GET IN TOUCH — KANAN */}
           <div className="bg-[#161616] p-8 rounded-xl divChange">
             <h2 className="text-3xl font-bold text-white mb-6 textChange font-[Arial,Helvetica,sans-serif]">
-              GET IN TOUCH WITH US!
+              HUBUNGI KAMI
             </h2>
 
             <form action="#" method="POST" className="space-y-4">
@@ -49,13 +49,13 @@ const Footer = () => {
 
               <div>
                 <label className="block text-sm font-medium text-white textChange">
-                  Contact Purpose
+                  Tujuan Kontak
                 </label>
                 <select id="purpose" name="purpose" 
                   className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-gray-900 focus:border-gray-900 formContact">
-                  <option>Partnership</option>
-                  <option>Feedback</option>
-                  <option>Question</option>
+                  <option>Klien</option>
+                  <option>Masukan</option>
+                  <option>Pertanyaan</option>
                 </select>
               </div>
 
@@ -69,7 +69,7 @@ const Footer = () => {
 
               <button type="submit" 
                 className="w-full px-4 py-3 bg-[#161616] text-white font-semibold textChange divChange">
-                Send
+                Kirim
               </button>
             </form>
             <div className="bg-[#161616] p-8 rounded-xl divChange">
@@ -102,7 +102,7 @@ const Footer = () => {
 
     <footer className="bg-[#161616] xs:mt-[-10%] md:mt-0 lg:mt-0 xl:mt-0 text-white py-8 text-center textChange divChange">
       <div className="max-w-7xl mx-auto px-4">
-        <p>&copy; 2024 Lighter Media Group. LIGHT THE WORLD THROUGH MEDIA.</p>
+        <p>&copy; 2024 Lighter Media Group. WIN THE MARKET FOR YOU.</p>
       </div>
     </footer>
     </Element>
