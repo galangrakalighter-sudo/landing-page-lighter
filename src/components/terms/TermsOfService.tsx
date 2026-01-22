@@ -79,9 +79,9 @@ const TermsOfService: React.FC = () => {
         <div className="mt-16 pt-8 border-t border-gray-100">
           <h3 className="text-lg font-bold text-gray-800 mb-2">Punya Pertanyaan?</h3>
           <p className="text-gray-600">
-            Hubungi tim legal kami melalui email di 
-            <a href="mailto:legal@perusahaananda.com" className="text-blue-600 hover:underline ml-1">
-              legal@perusahaananda.com
+            Hubungi tim kami melalui email di 
+            <a href="mailto:admin@lightermediagroup.com" className="text-blue-600 hover:underline ml-1">
+              admin@lightermediagroup.com
             </a>
           </p>
         </div>

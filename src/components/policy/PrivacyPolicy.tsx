@@ -90,7 +90,7 @@ const PrivacyPolicy: React.FC = () => {
               Jika Anda memiliki kekhawatiran mengenai privasi data Anda, silakan hubungi petugas perlindungan data kami di:
             </p>
             <p className="mt-4 font-semibold text-indigo-600">
-              privacy@lightermediagroup.com
+              admin@lightermediagroup.com
             </p>
           </div>
 
