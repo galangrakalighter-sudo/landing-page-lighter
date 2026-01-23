@@ -12,7 +12,7 @@ const Partnership = () => {
       <div className="absolute inset-0 flex items-center justify-center text-white ml-[30%] md:ml-[50%]">
         <div>
           <h5 className="xs:text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-5xl font-extrabold text-center text-white md:mr-5 font-[Arial,Helvetica,sans-serif]">BE PARTNERSHIP</h5>
-          <h1 className="xs:ml-[3%] xs:text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-7xl font-extrabold mt-2 text-white font-[Arial,Helvetica,sans-serif] whitespace-nowrap">WITH US NOW!</h1>
+          <h1 className="xs:text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-7xl font-extrabold mt-2 text-white font-[Arial,Helvetica,sans-serif] whitespace-nowrap">WITH US NOW!</h1>
           <div className="mt-6 flex justify-center md:justify-center">
               <a href="#contact" className="inline-flex items-center text-lg font-medium text-white rounded-full border border-white px-3 py-1 md:px-10 md:py-2" id="button_contact">
                 HUBUNGI KAMI SEKARANG
