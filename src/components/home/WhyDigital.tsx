@@ -3,7 +3,7 @@ import { Element } from "react-scroll";
 import React from "react";
 import Aurora from '@/components/Aurora';
 import GradientText from '@/components/GradientText';
-
+import { Link } from "react-router-dom";
 const WhyDigital: React.FC = () => {
   return (
     <Element name="collect-section">
@@ -63,13 +63,13 @@ const WhyDigital: React.FC = () => {
 
               <div className="flex justify-center md:justify-start">
                 {/* TOMBOL DISESUAIKAN DENGAN SECTION JELAJAH */}
-                <a 
-                  href="#" 
-                  className="mt-8 md:mt-10 inline-flex items-center justify-center text-black bg-white hover:bg-gray-200 transition-all duration-300 font-bold rounded-full text-sm sm:text-base px-6 py-4 sm:px-8 sm:py-5 uppercase tracking-tighter" 
-                  id='button_read'
+                <Link
+                  to="/tentang#tentang"
+                  className="mt-8 md:mt-10 inline-flex items-center justify-center text-black bg-white hover:bg-gray-200 transition-all duration-300 font-bold rounded-full text-sm sm:text-base px-6 py-4 sm:px-8 sm:py-5 uppercase tracking-tighter"
+                  id="button_read"
                 >
-                  READ MORE
-                </a>
+                  Baca Selengkapnya
+                </Link>
               </div>
             </div>
 

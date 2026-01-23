@@ -1,7 +1,8 @@
 import { Heart } from "lucide-react";
 import { scroller } from "react-scroll";
 import { Element } from "react-scroll";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 const Footer = () => {
   return (
     <Element name="contact-section">
@@ -74,25 +75,45 @@ const Footer = () => {
             </form>
             <div className="bg-[#161616] p-8 rounded-xl divChange">
               <h3 className="text-2xl font-bold text-white mb-6 border-b pb-3 textChange font-[Arial,Helvetica,sans-serif]">
-                DEPARTMENT OF MEDIA GROUP
+                KONTAK KAMI
               </h3>
 
               <ul className="space-y-4 text-gray-700">
                 <li className="flex items-center space-x-3">
-                  <span className="text-white font-bold text-lg textChange font-[Arial,Helvetica,sans-serif]">LGTR DIGITAL MARKETING</span>
+                  <span className="text-white font-bold text-lg textChange font-[Arial,Helvetica,sans-serif]">wegrow@lightermediagroup.com</span>
                 </li>
                 <li className="flex items-center space-x-3">
-                  <span className="text-white font-bold text-lg textChange font-[Arial,Helvetica,sans-serif]">EIKYO MANAGEMENT</span>
+                 <div className="bg-green-500 w-9 h-9 rounded-full flex items-center justify-center">
+                    <FontAwesomeIcon
+                      icon={faWhatsapp}
+                      className="text-white text-2xl"
+                    />
+                  </div>
+                  <span className="text-white font-bold text-lg textChange font-[Arial,Helvetica,sans-serif]">
+                    <a href="https://wa.me/628812431684" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors">
+                      +628812431684
+                    </a>
+                  </span>
                 </li>
+
+                {/* Instagram */}
                 <li className="flex items-center space-x-3">
-                  <span className="text-white font-bold text-lg textChange font-[Arial,Helvetica,sans-serif]">LIGHTER ACADEMY</span>
+                  <div className="bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] p-2 rounded-full">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                  </div>
+                  <span className="text-white font-bold text-lg textChange font-[Arial,Helvetica,sans-serif]">
+                    <a href="https://www.instagram.com/lightermediagroup/" target="_blank" rel="noopener noreferrer" className="hover:text-pink-400 transition-colors">
+                      @lightermediagroup
+                    </a>
+                  </span>
                 </li>
-                <li className="flex items-center space-x-3">
-                  <span className="text-white font-bold text-lg textChange font-[Arial,Helvetica,sans-serif]">RADDINE</span>
-                </li>
-                <li className="flex items-center space-x-3">
+                {/* <li className="flex items-center space-x-3">
                   <span className="text-white font-bold text-lg textChange font-[Arial,Helvetica,sans-serif]">LIGHTER MULTIMEDIA</span>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>

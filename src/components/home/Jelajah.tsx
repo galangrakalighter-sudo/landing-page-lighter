@@ -10,56 +10,56 @@ const divisions = [
     id: "raddine",
     title: "BRANDING",
     badge: "Branding",
-    desc: `Partnership terpercaya Anda, memberikan excellent branding service. RADDINE adalah mitra strategis Anda dalam membangun identitas merek yang kuat.`,
+    desc: `Kami membantu brand membangun identitas yang jelas dan konsisten agar relevan dan mudah dikenali di berbagai kanal digital.`,
     image: Image1,
   },
   {
     id: "digimark",
     title: "DIGITAL MARKETING",
     badge: "Marketing",
-    desc: `Memberikan jasa dokumentasi terbaik untuk kebutuhan event Anda. Tim multimedia kami siap mengabadikan setiap momen penting dengan kualitas profesional.`,
+    desc: `Kami membantu bisnis menjangkau target yang tepat dan mendorong penjualan melalui strategi pemasaran digital terarah dan terukur.`,
     image: Image2,
   },
   {
     id: "mcn",
-    title: "MCN.",
+    title: "MULTI CHANEL NETWORK",
     badge: "MCN",
-    desc: `Pelayanan jasa terbaik untuk digital marketing Anda. Tingkatkan kehadiran digital Anda dengan strategi marketing online yang efektif.`,
+    desc: `Kami menghubungkan kreator dengan brand untuk kolaborasi konten yang relevan dan bernilai bagi kedua pihak.`,
     image: Image3,
   },
   {
     id: "multimedia",
-    title: "MULTIMEDIA.",
+    title: "MULTIMEDIA",
     badge: "Multimedia",
-    desc: `Memberikan pelatihan SDM berkualitas dengan skill yang teruji. Lighter Academy berkomitmen untuk mengembangkan talenta melalui program pelatihan.`,
+    desc: `Kami menyediakan produksi konten visual dan video untuk mendukung kebutuhan media dan komunikasi brand.`,
     image: Image4,
   },
   {
     id: "academy",
-    title: "LIGHTER ACADEMY.",
+    title: "ACADEMY",
     badge: "Academy",
-    desc: `Memberikan management influencer dan talent yang terpercaya. EIKYO adalah platform manajemen influencer yang menghubungkan merek dengan talenta.`,
+    desc: `Kami menyediakan program edukasi dan pelatihan untuk pengembangan skill di bidang media dan digital.`,
     image: Image5,
   },
   {
     id: "academy",
-    title: "LIGHTER ACADEMY.",
-    badge: "Academy",
-    desc: `Memberikan management influencer dan talent yang terpercaya. EIKYO adalah platform manajemen influencer yang menghubungkan merek dengan talenta.`,
+    title: "TECHNOLOGY",
+    badge: "Technology",
+    desc: `Kami menyediakan solusi teknologi dan AI untuk mendukung sistem digital, automasi, dan kebutuhan bisnis.`,
     image: Image5,
   },
   {
     id: "academy",
-    title: "LIGHTER ACADEMY.",
-    badge: "Academy",
-    desc: `Memberikan management influencer dan talent yang terpercaya. EIKYO adalah platform manajemen influencer yang menghubungkan merek dengan talenta.`,
+    title: "EVENT ORGANIZER",
+    badge: "Event Organizer",
+    desc: `Kami merancang dan mengeksekusi acara untuk mendukung aktivasi brand, komunitas, dan kebutuhan bisnis.`,
     image: Image5,
   },
   {
     id: "academy",
-    title: "LIGHTER ACADEMY.",
-    badge: "Academy",
-    desc: `Memberikan management influencer dan talent yang terpercaya. EIKYO adalah platform manajemen influencer yang menghubungkan merek dengan talenta.`,
+    title: "ECOMMERCE",
+    badge: "Ecommerce",
+    desc: `Kami membantu bisnis mengelola serta mengoptimalkan penjualan melalui kanal e-commerce.`,
     image: Image5,
   },
 ];
@@ -73,7 +73,7 @@ const Jelajah = () => {
           JELAJAHI EKOSISTEM MEDIA DIGITAL
         </h2>
 
-        <p className="mt-2 text-3xl md:text-5xl font-extrabold text-white mb-16 textChange font-[Arial,Helvetica,sans-serif]">
+        <p className="mt-2 text-3xl md:text-5xl font-semibold text-white mb-16 textChange font-[Arial,Helvetica,sans-serif]">
           TERINTEGRASI LIGHTER MEDIA GROUP
         </p>
 
@@ -93,18 +93,18 @@ const Jelajah = () => {
               {/* Content Section */}
               <div className="p-4 sm:p-6 flex flex-col flex-grow">
 
-                <h5 className="mt-3 mb-2 sm:mt-4 sm:mb-3 text-sm sm:text-2xl md:text-2xl tracking-tight text-white leading-tight min-h-[2.5rem] sm:min-h-[3rem] font-[Arial,Helvetica,sans-serif] font-bold whitespace-nowrap">
+                <h5 className="mt-2 mb-2 sm:mt-4 sm:mb-3 text-sm sm:text-2xl md:text-2xl tracking-tight text-white leading-tight min-h-[2.5rem] sm:min-h-[3rem] font-[Arial,Helvetica,sans-serif] font-bold">
                   {item.title}
                 </h5>
 
-                <p className="text-gray-400 sm:text-xl md:text-xl lg:text-xl sm:text-sm leading-relaxed mb-4 sm:mb-6 line-clamp-3 sm:line-clamp-4">
+                <p className="text-gray-400 sm:text-xl md:text-xl lg:text-[17px] sm:text-sm leading-relaxed mb-4 sm:mb-6">
                   {item.desc}
                 </p>
 
                 {/* Read More Button - Ukuran disesuaikan agar muat di grid 2 kolom HP */}
                 <div className="mt-auto">
                   <a href="#" className="inline-flex items-center justify-center w-full text-black bg-white hover:bg-gray-200 transition-colors font-bold rounded-full text-[9px] sm:text-xs px-3 py-2 sm:px-5 sm:py-2.5 uppercase tracking-tighter">
-                    Read more
+                    info lengkap
                     <svg className="w-3 h-3 sm:w-4 sm:h-4 ms-1 sm:ms-1.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                       <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
                     </svg>
