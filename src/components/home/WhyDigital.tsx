@@ -32,8 +32,11 @@ const WhyDigital: React.FC = () => {
             </div>
 
             {/* TEXT SECTION - Muncul di bawah gambar pada mobile (order-2) */}
-            <div className="w-full md:w-1/2 text-left md:text-left order-2 md:order-2">
-              <div className="flex flex-col items-center md:items-start justify-center md:justify-start gap-y-1 md:gap-y-2">
+            {/* Ubah w-1/2 menjadi mx-auto agar div berada di tengah, dan items-start agar isinya rata kiri */}
+            <div className="w-full md:w-fit xs:ml-[17%] sm:ml-[20%] md:ml-[0%] text-left order-2 md:order-2 flex flex-col items-start px-6 md:px-0">
+              
+              {/* Bagian Judul */}
+              <div className="flex flex-col items-start justify-center gap-y-1 md:gap-y-2">
                 <h1 className="text-[8vw] sm:text-5xl md:text-[5vw] lg:text-7xl xl:text-[4vw] ll:text-5xl font-bold mb-0 whitespace-nowrap font-[Arial,Helvetica,sans-serif] leading-none" id="gradienTeks1">
                   KENAPA LIGHTER
                 </h1>
@@ -42,17 +45,17 @@ const WhyDigital: React.FC = () => {
                   MEDIA GROUP
                 </h1>
 
-                {/* Elemen Tambahan tetap dipertahankan sesuai script asli */}
+                {/* Elemen Hidden tetap dipertahankan */}
                 <h1 className="text-[8vw] sm:text-5xl md:text-[5vw] lg:text-7xl xl:text-[4vw] font-bold ll:text-5xl mb-0 whitespace-nowrap font-[Arial,Helvetica,sans-serif] hidden" id="teks_biasa1">
                   KENAPA LIGHTER
                 </h1>
-
                 <h1 className="text-[8vw] sm:text-5xl md:text-[5vw] lg:text-7xl xl:text-[4vw] font-bold ll:text-5xl ll:mt-[-1%] mb-0 whitespace-nowrap font-[Arial,Helvetica,sans-serif] md:mt-[3%] hidden" id="teks_biasa2">
                   MEDIA GROUP
                 </h1>
               </div>
 
-              <p className="mt-6 md:mt-4 text-white mx-auto md:mx-0 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl font-[Arial,Helvetica,sans-serif]" id='paragraf_sec1'>
+              {/* Paragraf - mx-0 memastikan tetap rata kiri terhadap judul */}
+              <p className="mt-6 md:mt-4 text-white text-left mx-0 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl font-[Arial,Helvetica,sans-serif]" id='paragraf_sec1'>
                 Lighter Media Group bekerja sebagai ekosistem media digital terintegrasi.
                 Kami menaungi berbagai kanal media dan layanan digital dalam satu sistem.
                 LMG membantu brand hadir dan berkembang di ruang digital yang terus berubah.
@@ -61,8 +64,8 @@ const WhyDigital: React.FC = () => {
                 Lighter Media Group adalah partner media digital untuk pertumbuhan jangka panjang
               </p>
 
-              <div className="flex justify-center md:justify-start">
-                {/* TOMBOL DISESUAIKAN DENGAN SECTION JELAJAH */}
+              {/* Tombol - justify-start agar tetap rata kiri sejajar teks */}
+              <div className="flex justify-start w-full">
                 <Link
                   to="/tentang#tentang"
                   className="mt-8 md:mt-10 inline-flex items-center justify-center text-black bg-white hover:bg-gray-200 transition-all duration-300 font-bold rounded-full text-sm sm:text-base px-6 py-4 sm:px-8 sm:py-5 uppercase tracking-tighter"

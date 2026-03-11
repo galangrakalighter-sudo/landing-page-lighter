@@ -5,7 +5,7 @@ import Jelajah from "@/components/home/Jelajah";
 import Partnership from "@/components/Partnership";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/home/Navbar";
-import CaraKerja from "@/components/home/caraKerja";
+import CaraKerja from "@/components/home/CaraKerja";
 import Client from "@/components/home/Client";
 import Projects from "@/components/home/Projects";
 import Maps from "@/components/Maps";

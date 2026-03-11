@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { toggleTheme } from "@/components/about/Theme";
-import Logo from '@/assets/Home/logo.jpg'
+import Logo from '@/assets/logo_nav.png'
 const Navbar: React.FC = () => {
   const [open, setOpen] = useState<boolean>(false);
 
@@ -16,13 +16,38 @@ const Navbar: React.FC = () => {
 
   // Data untuk Mega Menu Produk
   const productItems = [
-    { title: "Branding Agency", desc: "Connect with third-party tools that you're already using." },
-    { title: "Digital Marketing Agency", desc: "Connect with third-party tools that you're already using." },
-    { title: "E-Commerce Agency", desc: "Connect with third-party tools that you're already using." },
-    { title: "Tech Agency", desc: "Connect with third-party tools that you're already using." },
-    { title: "Event Organizer", desc: "Connect with third-party tools that you're already using." },
-    { title: "Multimedia", desc: "Connect with third-party tools that you're already using." },
-    { title: "Academy", desc: "Connect with third-party tools that you're already using." }
+    { 
+      title: "Branding Agency", 
+      desc: "Membangun identitas visual dan karakter brand yang ikonik serta tak terlupakan." 
+    },
+    { 
+      title: "Digital Marketing Agency", 
+      desc: "Melejitkan performa bisnis melalui strategi iklan digital dan konten yang konversif." 
+    },
+    { 
+      title: "E-Commerce Agency", 
+      desc: "Optimasi toko online dan marketplace untuk meningkatkan volume penjualan secara masif." 
+    },
+    { 
+      title: "Tech Agency", 
+      desc: "Transformasi digital melalui pengembangan software, aplikasi, dan infrastruktur IT mutakhir." 
+    },
+    { 
+      title: "Event Organizer", 
+      desc: "Menciptakan pengalaman acara yang berkesan dengan manajemen operasional yang presisi." 
+    },
+    { 
+      title: "Multimedia", 
+      desc: "Produksi konten visual, video, dan audio berkualitas tinggi untuk berbagai kebutuhan kreatif." 
+    },
+    { 
+      title: "Academy", 
+      desc: "Program pelatihan dan workshop intensif untuk meningkatkan skill di industri kreatif." 
+    },
+    { 
+      title: "MCN", 
+      desc: "Manajemen talenta dan kreator untuk memaksimalkan potensi konten di platform digital." 
+    }
   ];
 
   return (
@@ -68,16 +93,13 @@ const Navbar: React.FC = () => {
                   </div>
                 </li>
                 
-                <li><a href="#eksplorasi" className="hover:text-gray-400 transition">Berita</a></li>
+                <li><a href="https://berita.lightermediagroup.com" className="hover:text-gray-400 transition">Berita</a></li>
                 <li><a href="#contact" className="hover:text-gray-400 transition">Kontak</a></li>
               </ul>
             </div>
-            <div className="flex-1 hidden md:block"></div>
-
-          </div>
-        </nav>
-          {/* <div className="flex-1 flex justify-end items-center gap-4">
-            <div className="hidden md:block">
+            {/* <div className="flex-1 hidden md:block"></div> */}
+          <div className="flex-1 flex justify-end items-center gap-4">
+            {/* <div className="hidden md:block">
               <button onClick={toggleTheme} className="relative w-14 h-7 flex items-center bg-gray-300 dark:bg-gray-600 rounded-full px-1 transition-colors duration-300 focus:outline-none">
                 <span className="absolute left-1.5 text-yellow-500 dark:opacity-0 transition-opacity duration-300">  
                 </span>
@@ -87,12 +109,15 @@ const Navbar: React.FC = () => {
 
                 <span className="bg-white w-5 h-5 rounded-full shadow-md transform transition-transform duration-300 dark:translate-x-7 z-10"></span>
               </button>
-            </div>
+            </div> */}
 
             <button className="md:hidden text-white hover:text-gray-400 transition" onClick={() => setOpen(true)}>
               <Menu size={28} />
             </button>
-          </div> */}
+          </div>
+
+          </div>
+        </nav>
 
       {/* SIDEBAR MOBILE */}
       <div className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-40 transition-opacity ${ open ? "opacity-100 visible" : "opacity-0 invisible" }`} onClick={() => setOpen(false)}></div>
@@ -105,6 +130,7 @@ const Navbar: React.FC = () => {
         <ul className="mt-12 space-y-6 text-lg border-t border-gray-700 pt-6">
           <li><a href="/" className="block hover:text-gray-300" onClick={() => setOpen(false)}>Home</a></li>
           <li><a href="/tentang" className="block hover:text-gray-300" onClick={() => setOpen(false)}>Tentang Kami</a></li>
+          <li><a href="https://berita.lightermediagroup.com/" className="block hover:text-gray-300" onClick={() => setOpen(false)}>Berita</a></li>
           <li>
              <p className="text-gray-500 text-sm uppercase mb-3">Produk</p>
              <div className="pl-4 space-y-4">

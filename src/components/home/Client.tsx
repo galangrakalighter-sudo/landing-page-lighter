@@ -1,10 +1,5 @@
 import React from 'react';
-import { 
-  Briefcase, Users, Star, ArrowUpRight, 
-  Zap, Shield, Globe, Cpu, Rocket, BarChart3, 
-  Layers, Hexagon, Component, Maximize
-} from 'lucide-react';
-
+import { Link } from "react-router-dom";
 import image1 from "@/assets/logo_big_client/Orson.png"
 import image2 from "@/assets/logo_big_client/nacific.png"
 import image3 from "@/assets/logo_big_client/pw.png"
@@ -17,14 +12,14 @@ import image8 from "@/assets/logo_big_client/padimas.png"
 const Client = () => {
   // 10 Klien dengan icon representatif untuk kesan lebih visual/modern
   const clients = [
-    { name: "ORSON", industry: "SaaS", img: image1 },
+    { name: "PADIMAS", industry: "Cloud", img: image8 },
+    { name: "ARDAN", industry: "Fintech", img: image7 },
     { name: "NACIFIC", industry: "Logistik", img: image2 },
     { name: "PAKAR WISATA", industry: "AI Research", img: image3 },
-    { name: "AUTO 2000", industry: "Marketing", img: image4 },
-    { name: "DataVibe", industry: "Analytics", img: image5 },
     { name: "WULING", industry: "Green Tech", img: image6 },
-    { name: "ARDAN", industry: "Fintech", img: image7 },
-    { name: "PADIMAS", industry: "Cloud", img: image8 },
+    { name: "IKATAN DOKTER INDONESIA", industry: "Analytics", img: image5 },
+    { name: "AUTO 2000", industry: "Marketing", img: image4 },
+    { name: "ORSON", industry: "SaaS", img: image1 },
   ];
 
   const stats = [
@@ -59,22 +54,38 @@ const Client = () => {
           {clients.map((client, index) => (
             <div 
               key={index} 
-              className="group relative bg-[#0a0a0a] p-8 md:p-14 flex flex-col items-center justify-center transition-all duration-500 hover:bg-white/[0.02]"
+              className="group relative bg-[#0a0a0a] p-8 md:p-12 flex flex-col items-center justify-center transition-all duration-500 hover:bg-white/[0.02]"
             >
-              {/* Logo / Icon Area */}
-              <div className="relative z-10 text-slate-500 group-hover:text-blue-500 transition-all duration-500 group-hover:scale-110">
+              {/* Logo Area */}
+              <div className="relative z-10 transition-all duration-500 group-hover:scale-110">
                 <img 
                   src={client.img} 
-                  className="max-h-10 md:max-h-20 w-auto object-contain"
+                  alt={client.name}
+                  className="h-16 sm:h-24 md:h-24 w-auto object-contain brightness-90 group-hover:brightness-100"
                 />
               </div>
+
+              <div className="mt-6 text-center relative z-10">
+                <h3 className="text-[10px] md:text-xs font-bold tracking-[0.2em] text-gray-500 group-hover:text-white transition-colors uppercase">
+                  {client.name}
+                </h3>
+              </div>
               
-              {/* Subtle Inner Shadow & Glow Effect */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
-                <div className="absolute inset-0 bg-gradient-to-b from-blue-500/[0.03] to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-blue-600/[0.07] to-transparent"></div>
               </div>
             </div>
           ))}
+
+          {/* TOMBOL DI DALAM GRID - Menggunakan col-span */}
+          <div className="col-span-2 md:col-span-4 bg-[#111111] flex justify-center items-center p-10 border-t border-white/5">
+            <Link
+              to="#"
+              className="group inline-flex items-center justify-center text-black bg-white transition-all duration-300 font-bold rounded-full text-sm sm:text-base px-10 py-4 uppercase tracking-widest"
+            >
+              Lihat Selengkapnya
+            </Link>
+          </div>
         </div>
 
       </section>

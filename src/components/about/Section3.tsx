@@ -24,12 +24,13 @@ const Section3 = () => {
                             </div> */}
 
                             <h2 className="text-3xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold mb-4 md:mb-6 text-white textChange uppercase font-[Arial,Helvetica,sans-serif] leading-tight">
-                                OUR VISION
+                                VISI KAMI
                             </h2>
 
                             <p className="text-lg xs:text-2xl sm:text-3xl md:text-2xl xl:text-4xl md:ml-[3%] opacity-80 leading-relaxed mt-4 md:mt-6 text-white textChange font-[Arial,Helvetica,sans-serif]">
-                                Provider media digital yang memberikan keuntungan bagi pengguna jasa-nya
-                                dan menjadi perusahaan media digital terbaik di Bandung
+                                Menjadi ekosistem media digital terintegrasi yang profesional
+                                dan terpercaya untuk mendorong pertumbuhan bisnis klien secara
+                                terukur dan berkelanjutan di Indonesia
                             </p>
                         </div>
 
@@ -44,19 +45,19 @@ const Section3 = () => {
                             </div> */}
 
                             <h2 className="text-3xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold mb-6 md:mb-8 tracking-tight uppercase font-[Arial,Helvetica,sans-serif] leading-tight">
-                                OUR MISSION
+                                MISI KAMI
                             </h2>
 
                             <ul className="text-base xs:text-3xl sm:text-lg md:text-xl opacity-80 leading-relaxed space-y-4 max-w-3xl pl-5">
-                                <li className="xs:text-2xl sm:text-3xl md:text-2xl xl:text-3xl font-[Arial,Helvetica,sans-serif]">• Membangun organisasi yang profesional dan excellent service</li>
+                                <li className="xs:text-2xl sm:text-3xl md:text-2xl xl:text-3xl font-[Arial,Helvetica,sans-serif]">• Mengintegrasikan media, layanan spesialis, teknologi, dan commerce dalam satu sistem kerja yang saling terhubung</li>
                                 <li className="xs:text-2xl sm:text-3xl md:text-2xl xl:text-3xl font-[Arial,Helvetica,sans-serif]">
-                                    • Melakukan riset dan development dalam menghadapi tantangan 2025,
-                                    menyediakan tempat produksi yang lebih besar dan layak untuk meningkatkan kualitas jasa
+                                    • Menjadikan media sebagai aset traffic dan trust untuk mendukung pertumbuhan bisnis klien
                                 </li>
                                 <li className="xs:text-2xl sm:text-3xl md:text-2xl xl:text-3xl font-[Arial,Helvetica,sans-serif]">
-                                    • Upgrade peralatan digital yang sesuai perkembangan
+                                    • Mengembangkan strategi berbasis data, riset, dan performa yang dapat dipertanggungjawabkan
                                 </li>
-                                <li className="xs:text-2xl sm:text-3xl md:text-2xl xl:text-3xl font-[Arial,Helvetica,sans-serif]">• Meningkatkan omset hingga 1000%</li>
+                                <li className="xs:text-2xl sm:text-3xl md:text-2xl xl:text-3xl font-[Arial,Helvetica,sans-serif]">• Memanfaatkan teknologi dan AI untuk meningkatkan efisiensi, konsistensi, dan skalabilitas layanan</li>
+                                <li className="xs:text-2xl sm:text-3xl md:text-2xl xl:text-3xl font-[Arial,Helvetica,sans-serif]">• Membangun tim spesialis yang solid dan mandiri di setiap unit agar eksekusi tetap berkualitas</li>
                             </ul>
                         </div>
                     </div>

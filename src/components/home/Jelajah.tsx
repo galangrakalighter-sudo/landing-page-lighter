@@ -35,6 +35,13 @@ const divisions = [
     image: Image4,
   },
   {
+    id: "mcn",
+    title: "MCN",
+    badge: "MCN",
+    desc: `Kami menyediakan produksi konten visual dan video untuk mendukung kebutuhan media dan komunikasi brand.`,
+    image: Image4,
+  },
+  {
     id: "academy",
     title: "ACADEMY",
     badge: "Academy",
