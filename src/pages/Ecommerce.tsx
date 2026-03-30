@@ -20,7 +20,7 @@ import React, { useState } from "react";
 
 const Ecommerce: React.FC = () => {
   return (
-    <main className="min-h-screen bg-[#FEFFFF] font-sans text-slate-900">
+    <main className="min-h-screen bg-[#FEFFFF] text-slate-900">
       <Navbar />
       <HeroSection />
       <ProblemSection />

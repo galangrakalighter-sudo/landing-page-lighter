@@ -36,7 +36,7 @@ const SolutionSection = () => {
         
         {/* Title - Arial Stack (Tracking Normal & Font Black) */}
         <h3 className="text-5xl md:text-7xl font-black text-white uppercase mb-24 tracking-normal leading-tight font-['Arial','Helvetica',sans-serif]">
-          TIGA PILAR <span className="text-neutral-500 font-['Arial','Helvetica',sans-serif]">RADDINE</span>
+          TIGA PILAR RADDINE
         </h3>
 
         <div className="grid lg:grid-cols-3 gap-16">

@@ -28,6 +28,11 @@ const Navbar: React.FC = () => {
       desc: "Melejitkan performa bisnis melalui strategi iklan digital dan konten yang konversif." 
     },
     { 
+      title: "MCN", 
+      url: "/mcn",
+      desc: "Manajemen talenta dan kreator untuk memaksimalkan potensi konten di platform digital." 
+    },
+    { 
       title: "E-Commerce Agency", 
       url: "/ecommerce",
       desc: "Optimasi toko online dan marketplace untuk meningkatkan volume penjualan secara masif." 
@@ -36,6 +41,11 @@ const Navbar: React.FC = () => {
       title: "Tech Agency", 
       url: "/tech",
       desc: "Transformasi digital melalui pengembangan software, aplikasi, dan infrastruktur IT mutakhir." 
+    },
+    { 
+      title: "Academy", 
+      url: "/academy",
+      desc: "Program pelatihan dan workshop intensif untuk meningkatkan skill di industri kreatif." 
     },
     { 
       title: "Event Organizer", 
@@ -47,16 +57,6 @@ const Navbar: React.FC = () => {
       url: "/multimedia",
       desc: "Produksi konten visual, video, dan audio berkualitas tinggi untuk berbagai kebutuhan kreatif." 
     },
-    { 
-      title: "Academy", 
-      url: "/academy",
-      desc: "Program pelatihan dan workshop intensif untuk meningkatkan skill di industri kreatif." 
-    },
-    { 
-      title: "MCN", 
-      url: "/mcn",
-      desc: "Manajemen talenta dan kreator untuk memaksimalkan potensi konten di platform digital." 
-    }
   ];
 
   return (
@@ -102,7 +102,7 @@ const Navbar: React.FC = () => {
                 </div>
               </li>
               
-              <li><a href="https://berita.lightermediagroup.com/" target="_blank" className="hover:text-gray-400 transition">Berita</a></li>
+              <li><a href="http://192.168.100.50:3030/" target="_blank" className="hover:text-gray-400 transition">Berita</a></li>
               <li><a href="#contact" className="hover:text-gray-400 transition">Kontak</a></li>
             </ul>
           </div>

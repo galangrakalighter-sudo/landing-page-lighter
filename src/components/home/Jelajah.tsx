@@ -1,9 +1,13 @@
 import { useState } from "react";
-import Image1 from "@/assets/home/image1-eksplor.png"
-import Image2 from "@/assets/home/File-Department_05.png"
-import Image3 from "@/assets/home/image5-eksplor.png"
-import Image4 from "@/assets/home/image2-eksplor.png"
-import Image5 from "@/assets/home/image4-eksplor.png"
+import Image1 from "@/assets/home/raja.jpeg"
+import Image2 from "@/assets/home/ratu.jpeg"
+import Image3 from "@/assets/home/gajah (2).jpeg"
+import Image4 from "@/assets/home/gajah.jpeg"
+import Image5 from "@/assets/home/benteng.jpeg"
+import Image6 from "@/assets/home/pion.jpeg"
+import Image7 from "@/assets/home/kuda.jpeg"
+import Image8 from "@/assets/home/ratu.jpeg"
+import Image9 from "@/assets/home/pion.jpeg"
 
 const divisions = [
   {
@@ -12,6 +16,7 @@ const divisions = [
     badge: "Branding",
     desc: `Kami membantu brand membangun identitas yang jelas dan konsisten agar relevan dan mudah dikenali di berbagai kanal digital.`,
     image: Image1,
+    url: "/branding"
   },
   {
     id: "digimark",
@@ -19,6 +24,7 @@ const divisions = [
     badge: "Marketing",
     desc: `Kami membantu bisnis menjangkau target yang tepat dan mendorong penjualan melalui strategi pemasaran digital terarah dan terukur.`,
     image: Image2,
+    url: "/digital_marketing"
   },
   {
     id: "mcn",
@@ -26,6 +32,7 @@ const divisions = [
     badge: "MCN",
     desc: `Kami menghubungkan kreator dengan brand untuk kolaborasi konten yang relevan dan bernilai bagi kedua pihak.`,
     image: Image3,
+    url: "/mcn"
   },
   {
     id: "multimedia",
@@ -33,13 +40,7 @@ const divisions = [
     badge: "Multimedia",
     desc: `Kami menyediakan produksi konten visual dan video untuk mendukung kebutuhan media dan komunikasi brand.`,
     image: Image4,
-  },
-  {
-    id: "mcn",
-    title: "MCN",
-    badge: "MCN",
-    desc: `Kami menyediakan produksi konten visual dan video untuk mendukung kebutuhan media dan komunikasi brand.`,
-    image: Image4,
+    url: "/multimedia"
   },
   {
     id: "academy",
@@ -47,27 +48,31 @@ const divisions = [
     badge: "Academy",
     desc: `Kami menyediakan program edukasi dan pelatihan untuk pengembangan skill di bidang media dan digital.`,
     image: Image5,
+    url: "/academy"
   },
   {
     id: "academy",
     title: "TECHNOLOGY",
     badge: "Technology",
     desc: `Kami menyediakan solusi teknologi dan AI untuk mendukung sistem digital, automasi, dan kebutuhan bisnis.`,
-    image: Image5,
+    image: Image6,
+    url: "/tech"
   },
   {
     id: "academy",
     title: "EVENT ORGANIZER",
     badge: "Event Organizer",
     desc: `Kami merancang dan mengeksekusi acara untuk mendukung aktivasi brand, komunitas, dan kebutuhan bisnis.`,
-    image: Image5,
+    image: Image7,
+    url: "/event_organizer"
   },
   {
     id: "academy",
     title: "ECOMMERCE",
     badge: "Ecommerce",
     desc: `Kami membantu bisnis mengelola serta mengoptimalkan penjualan melalui kanal e-commerce.`,
-    image: Image5,
+    image: Image8,
+    url: "/ecommerce"
   },
 ];
 
@@ -110,7 +115,7 @@ const Jelajah = () => {
 
                 {/* Read More Button - Ukuran disesuaikan agar muat di grid 2 kolom HP */}
                 <div className="mt-auto">
-                  <a href="#" className="inline-flex items-center justify-center w-full text-black bg-white hover:bg-gray-200 transition-colors font-bold rounded-full text-[9px] sm:text-xs px-3 py-2 sm:px-5 sm:py-2.5 uppercase tracking-tighter">
+                  <a href={item.url} className="inline-flex items-center justify-center w-full text-black bg-white hover:bg-gray-200 transition-colors font-bold rounded-full text-[9px] sm:text-xs px-3 py-2 sm:px-5 sm:py-2.5 uppercase tracking-tighter">
                     info lengkap
                     <svg className="w-3 h-3 sm:w-4 sm:h-4 ms-1 sm:ms-1.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                       <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>

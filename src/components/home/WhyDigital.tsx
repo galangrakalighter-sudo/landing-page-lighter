@@ -1,4 +1,4 @@
-import Phone from '@/assets/home/phone.png'
+import Phone from '@/assets/home/phone_baru.png'
 import { Element } from "react-scroll";
 import React from "react";
 import Aurora from '@/components/Aurora';
