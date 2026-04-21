@@ -33,25 +33,25 @@ const WhyDigital: React.FC = () => {
 
             {/* TEXT SECTION - Muncul di bawah gambar pada mobile (order-2) */}
             {/* Ubah w-1/2 menjadi mx-auto agar div berada di tengah, dan items-start agar isinya rata kiri */}
-            <div className="w-full md:w-fit xs:ml-[17%] sm:ml-[20%] md:ml-[0%] text-left order-2 md:order-2 flex flex-col items-start px-6 md:px-0">
+            <div className="w-full md:w-fit xs:ml-[0%] sm:ml-[0%] md:ml-[0%] text-left order-2 md:order-2 flex flex-col items-start px-6 md:px-0">
               
               {/* Bagian Judul */}
               <div className="flex flex-col items-start justify-center gap-y-1 md:gap-y-2">
-                <h1 className="text-[8vw] sm:text-5xl md:text-[5vw] lg:text-7xl xl:text-[4vw] ll:text-5xl font-bold mb-0 whitespace-nowrap font-[Arial,Helvetica,sans-serif] leading-none" id="gradienTeks1">
+                <h2 className="text-[8vw] sm:text-5xl md:text-[5vw] lg:text-7xl xl:text-[4vw] ll:text-5xl font-bold mb-0 whitespace-nowrap font-[Arial,Helvetica,sans-serif] leading-none" id="gradienTeks1">
                   KENAPA LIGHTER
-                </h1>
+                </h2>
 
-                <h1 className="text-[8vw] sm:text-5xl md:text-[5vw] lg:text-7xl xl:text-[4vw] ll:text-5xl font-bold ll:mt-[-1%] mb-0 whitespace-nowrap font-[Arial,Helvetica,sans-serif] md:mt-[3%] leading-none" id="gradienTeks2">
+                <h2 className="text-[8vw] sm:text-5xl md:text-[5vw] lg:text-7xl xl:text-[4vw] ll:text-5xl font-bold ll:mt-[-1%] mb-0 whitespace-nowrap font-[Arial,Helvetica,sans-serif] md:mt-[3%] leading-none" id="gradienTeks2">
                   MEDIA GROUP
-                </h1>
+                </h2>
 
                 {/* Elemen Hidden tetap dipertahankan */}
-                <h1 className="text-[8vw] sm:text-5xl md:text-[5vw] lg:text-7xl xl:text-[4vw] font-bold ll:text-5xl mb-0 whitespace-nowrap font-[Arial,Helvetica,sans-serif] hidden" id="teks_biasa1">
+                <h2 className="text-[8vw] sm:text-5xl md:text-[5vw] lg:text-7xl xl:text-[4vw] font-bold ll:text-5xl mb-0 whitespace-nowrap font-[Arial,Helvetica,sans-serif] hidden" id="teks_biasa1">
                   KENAPA LIGHTER
-                </h1>
-                <h1 className="text-[8vw] sm:text-5xl md:text-[5vw] lg:text-7xl xl:text-[4vw] font-bold ll:text-5xl ll:mt-[-1%] mb-0 whitespace-nowrap font-[Arial,Helvetica,sans-serif] md:mt-[3%] hidden" id="teks_biasa2">
+                </h2>
+                <h2 className="text-[8vw] sm:text-5xl md:text-[5vw] lg:text-7xl xl:text-[4vw] font-bold ll:text-5xl ll:mt-[-1%] mb-0 whitespace-nowrap font-[Arial,Helvetica,sans-serif] md:mt-[3%] hidden" id="teks_biasa2">
                   MEDIA GROUP
-                </h1>
+                </h2>
               </div>
 
               {/* Paragraf - mx-0 memastikan tetap rata kiri terhadap judul */}

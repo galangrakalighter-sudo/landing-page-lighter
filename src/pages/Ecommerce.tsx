@@ -14,6 +14,7 @@ import ValuePropositionSection from "@/components/ecommerce/Proposisi";
 import FAQSection from "@/components/ecommerce/FAQ";
 import Partnership from "@/components/Partnership";
 import Footer from "@/components/Footer";
+import Client from "@/components/home/Client";
 import Navbar from "@/components/home/Navbar";
 import Maps from "@/components/Maps";
 import React, { useState } from "react";
@@ -29,8 +30,10 @@ const Ecommerce: React.FC = () => {
       <ServicesScopeSection />
       <ConversionSystemSection />
       <ProcessSection />
-      <CaseStudySection />
-      <TestimonialSection />
+      {/* <CaseStudySection /> */}
+      {/* <TestimonialSection /> */}
+      <Client />
+      <FAQSection />
       <Maps />
       <Partnership />
       <Footer />

@@ -13,6 +13,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/home/Navbar";
 import Maps from "@/components/Maps";
 import React, { useState } from "react";
+import Client from "@/components/home/Client";
 
 const Academy: React.FC = () => {
   return (
@@ -25,9 +26,10 @@ const Academy: React.FC = () => {
       <CurriculumSection />
       <CorporateTrainingSection />
       <LearningMethodSection />
-      <CareerOutcomeSection />
-      <TestimonialSection />
-      {/* <FAQSection /> */}
+      <Client />
+      {/* <CareerOutcomeSection /> */}
+      {/* <TestimonialSection /> */}
+      <FAQSection />
       <Maps />
       <Partnership />
       <Footer />

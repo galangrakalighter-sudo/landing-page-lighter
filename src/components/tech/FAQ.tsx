@@ -1,51 +1,83 @@
+import React, { useState } from 'react';
 
-import React, { useState } from 'react'
-const IconPlus = () => (
-  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
-  </svg>
-);
+interface FAQItem {
+  question: string;
+  answer: string;
+}
 
-const IconMinus = () => (
-  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20 12H4" />
-  </svg>
-);
+const SectionHeader = ({ subtitle, title, centered = false }: { subtitle: string; title: string; centered?: boolean }) => {
+  const arialStack = "font-['Arial',_Helvetica,_sans-serif]";
+  return (
+    <div className={`mb-16 ${centered ? 'text-center' : 'text-left'}`}>
+      <h2 className={`text-[#DAA059] font-black tracking-[0.4em] uppercase text-[10px] md:text-xs mb-4 flex items-center ${centered ? 'justify-center' : 'justify-start'} gap-3 italic ${arialStack}`}>
+        <span className="w-10 h-[2px] bg-[#DAA059]/30"></span>
+        {subtitle}
+      </h2>
+      <h3 className={`text-4xl md:text-6xl font-black text-slate-900 tracking-tighter leading-none uppercase italic ${arialStack}`}>
+        {title}
+      </h3>
+    </div>
+  );
+};
 
 const FAQSection = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const faqs = [
-    { q: "Apakah LIGHTER TECH hanya membuat website?", a: "Tidak. Fokus utama kami adalah digital infrastructure dan software engineering yang kompleks. Kami membangun sistem operasional, integrasi API, dan arsitektur cloud untuk mendukung bisnis skala besar." },
-    { q: "Berapa lama estimasi waktu pengembangan sistem?", a: "Tergantung pada kompleksitas arsitektur. Audit dan perencanaan biasanya memakan waktu 2-4 minggu, diikuti oleh fase engineering yang iteratif." },
-    { q: "Apakah bisa mengintegrasikan sistem baru dengan infrastruktur lama kami?", a: "Ya, kami spesialis dalam integrasi sistem. Kami akan melakukan audit sistem lama untuk menemukan titik integrasi terbaik melalui API atau middleware khusus." },
-    { q: "Apakah tersedia layanan maintenance pasca-peluncuran?", a: "Tentu. Sebagai partner jangka panjang, kami menyediakan paket dukungan profesional untuk monitoring sistem, security update, dan optimasi performa berkelanjutan." },
-    { q: "Apakah solusi yang dibangun siap untuk skala enterprise?", a: "Sangat. Kami menggunakan pendekatan 'Architecture First' yang menjamin sistem Anda modular dan siap menangani pertumbuhan volume data atau pengguna secara masif." }
+  // Independent toggle agar tidak menutup saat klik yang lain
+  const faqs: FAQItem[] = [
+    { question: "Berapa lama waktu pengerjaan sistem skala besar?", answer: "Tergantung kompleksitas, namun untuk Minimum Viable Product (MVP) biasanya membutuhkan waktu 8-12 minggu. Kami memprioritaskan kualitas arsitektur di atas segalanya." },
+    { question: "Apakah sistem kami bisa terintegrasi dengan API pihak ketiga?", answer: "Tentu. Kami memiliki spesialisasi dalam membangun middleware dan integrasi API (Payment Gateway, Logistik, dll) dengan standar keamanan enkripsi tertinggi." },
+    { question: "Bagaimana standar keamanan data di Lighter Tech?", answer: "Kami menerapkan 'Secure by Design'—artinya keamanan bukan tambahan, tapi fondasi. Menggunakan enkripsi AES-256, perlindungan SQL Injection, dan audit rutin." },
+    { question: "Apakah ada dukungan teknis setelah aplikasi rilis?", answer: "Kami adalah partner teknologi jangka panjang. Setiap proyek mencakup masa pemeliharaan gratis dan opsi kontrak Technical Partnership untuk skalabilitas berkelanjutan." }
   ];
 
+  const arialStack = "font-['Arial',_Helvetica,_sans-serif]";
+
   return (
-    <section className="py-24 bg-white border-t border-slate-100">
-      <div className="container mx-auto max-w-4xl px-6">
-        <h2 className="text-3xl font-bold text-center mb-16 tracking-tight">Strategic Inquiry</h2>
-        <div className="space-y-4">
+    <section className={`py-24 bg-slate-50 border-t border-slate-100 ${arialStack}`}>
+      <div className="container mx-auto max-w-5xl px-6">
+        
+        {/* Header - Mengikuti Struktur Referensi */}
+        <SectionHeader subtitle="Help Center" title="Technical FAQ." centered={false} />
+
+        <div className="space-y-6">
           {faqs.map((f, i) => (
-            <div key={i} className="border border-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <button 
-                onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full flex items-center justify-between p-7 bg-[#FEFFFF] text-left hover:bg-slate-50 transition-colors"
-              >
-                <span className="font-bold text-slate-800 text-lg">{f.q}</span>
-                <span className="text-[#D49045]">{openIndex === i ? <IconMinus /> : <IconPlus />}</span>
-              </button>
-              {openIndex === i && (
-                <div className="p-7 bg-white border-t border-slate-50 text-slate-600 leading-relaxed animate-fadeIn">
-                  {f.a}
-                </div>
-              )}
-            </div>
+            <FAQRow key={i} faq={f} arialStack={arialStack} />
           ))}
         </div>
       </div>
     </section>
   );
 };
+
+// Sub-komponen agar State bersifat mandiri (Independent Toggle)
+const FAQRow = ({ faq, arialStack }: { faq: FAQItem; arialStack: string }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className={`border border-slate-200 rounded-[32px] overflow-hidden transition-all duration-500 bg-white ${isOpen ? 'border-[#DAA059]/40 shadow-xl translate-x-2' : 'hover:border-[#DAA059]/20 shadow-sm'}`}>
+      <button 
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full p-8 md:p-10 text-left flex justify-between items-center bg-white group focus:outline-none"
+      >
+        <span className={`font-black text-[#0F172A] uppercase tracking-tighter text-xl italic group-hover:text-[#DAA059] transition-colors duration-300 ${arialStack}`}>
+          {faq.question}
+        </span>
+        
+        {/* Toggle Icon Bulat Gold */}
+        <div className={`w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-[#DAA059] flex items-center justify-center text-[#DAA059] transition-all duration-500 flex-shrink-0 ${isOpen ? 'rotate-180 bg-[#DAA059] text-white shadow-lg' : 'group-hover:bg-[#DAA059]/5'}`}>
+          <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M19 9l-7 7-7-7" strokeWidth={4} strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </div>
+      </button>
+
+      {/* Answer Content */}
+      <div className={`transition-all duration-500 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}>
+        <div className={`px-10 md:px-14 pb-10 text-slate-500 font-bold italic leading-relaxed text-lg pt-2 border-l-4 border-[#DAA059] ml-10 mb-4 ${arialStack}`}>
+          "{faq.answer}"
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default FAQSection;

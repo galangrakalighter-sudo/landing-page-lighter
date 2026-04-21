@@ -1,10 +1,38 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, Sun, Moon } from "lucide-react"; // Menambahkan Sun & Moon untuk toggle
-import { toggleTheme } from "@/components/home/Theme";
-import Logo from '@/assets/logo_nav.png'
+import { useNavigate } from "react-router-dom";
+import Logo from '@/assets/logo_nav.png';
+import { fetchPosts } from "@/components/services/wordpress";
+import { useQueryClient } from "@tanstack/react-query";
+import { useLoading } from "@/components/context/Loading";
 
 const Navbar: React.FC = () => {
+  const navigate = useNavigate();
+
+  const { loading } = useLoading();
+  const [isOpen, setIsOpen] = useState(false);
   const [open, setOpen] = useState<boolean>(false);
+
+  const { setLoading } = useLoading();
+  const queryClient = useQueryClient();
+  
+  const handleNavigate = async (e, href) => {
+    e.preventDefault();
+
+    setLoading(true);
+
+    if (href === "/artikel") {
+      await queryClient.prefetchQuery({
+        queryKey: ["posts"],
+        queryFn: () => fetchPosts(),
+      });
+    }
+
+    setTimeout(() => {
+      setLoading(false);
+      navigate(href);
+    }, 300);
+  };
 
   useEffect(() => {
     document.documentElement.classList.add("dark");
@@ -61,6 +89,21 @@ const Navbar: React.FC = () => {
 
   return (
     <>
+    {loading && (
+      <div className="fixed top-0 left-0 w-full h-[3px] bg-black z-[9999] overflow-hidden">
+        <div className="h-full w-[40%] bg-red-500 animate-[loading_1s_infinite]" />
+      </div>
+    )}
+
+      {/* 🔥 STYLE ANIMATION */}
+      <style>
+        {`
+          @keyframes loading {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(300%); }
+          }
+        `}
+      </style>
       {/* NAVBAR */}
       <nav className={`fixed top-0 left-0 w-full z-50 bg-[#28292D]`}>
         <div className="flex items-center px-8 py-4 text-white max-w-7xl mx-auto">
@@ -80,7 +123,7 @@ const Navbar: React.FC = () => {
               
               <li className="relative group py-2">
                 <button className="flex items-center gap-2 text-white hover:text-gray-400 transition">
-                  Produk
+                  Layanan
                   <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 text-gray-400 transition-transform duration-200 group-hover:rotate-180">
                     <path fillRule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clipRule="evenodd"/>
                   </svg>
@@ -90,7 +133,7 @@ const Navbar: React.FC = () => {
                   <div className="grid grid-cols-3 gap-x-10 gap-y-8">
                     {productItems.map((item, index) => (
                       <a key={index} href={item.url} className="group/item block transition">
-                        <h3 className="text-white font-bold text-lg mb-1 group-hover/item:text-blue-400 transition">
+                        <h3 className="text-white font-bold text-lg mb-1 group-hover/item:text-blue-400 transition font-[Arial,Helvetica,sans-serif]">
                           {item.title}
                         </h3>
                         <p className="text-gray-400 text-sm leading-snug">
@@ -102,7 +145,10 @@ const Navbar: React.FC = () => {
                 </div>
               </li>
               
-              <li><a href="http://192.168.100.50:3030/" target="_blank" className="hover:text-gray-400 transition">Berita</a></li>
+              <li><a href="/artikel" onClick={(e) => handleNavigate(e, "/artikel")}>
+              Artikel
+            </a></li>
+              <li><a href="https://berita.lightermediagroup.com/" target="_blank" className="hover:text-gray-400 transition">Berita</a></li>
               <li><a href="#contact" className="hover:text-gray-400 transition">Kontak</a></li>
             </ul>
           </div>
@@ -142,14 +188,14 @@ const Navbar: React.FC = () => {
              <p className="text-gray-500 text-sm uppercase mb-3">Produk</p>
              <div className="pl-4 space-y-4">
                 {productItems.slice(0, 7).map((item, idx) => (
-                  <a key={idx} href="#" className="block text-sm" onClick={() => setOpen(false)}>
+                  <a key={idx} href={item.url} className="block text-sm" onClick={() => setOpen(false)}>
                     <span className="block font-bold">{item.title}</span>
                   </a>
                 ))}
              </div>
           </li>
           <li><a href="https://berita.lightermediagroup.com/" target="_blank" onClick={() => setOpen(false)}>Berita</a></li>
-          <li><a href="/kontak" onClick={() => setOpen(false)}>Kontak</a></li>
+          <li><a href="#contact" onClick={() => setOpen(false)}>Kontak</a></li>
           {/* <li className="pt-4 border-t border-gray-700">
              <div className="flex items-center justify-between">
                 <span>Mode Gelap</span>

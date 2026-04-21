@@ -8,10 +8,16 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/home/Navbar";
 import Maps from "@/components/Maps";
 import React, { useState } from "react";
+import SEO from "@/components/Seo";
 
 const About: React.FC = () => {
   return (
     <main className="min-h-screen">
+      <SEO 
+        title="About Intregated Digital Media Ecosystem" 
+        description="Lighter Media Group membantu brand Anda tumbuh melalui strategi branding, digital marketing, dan produksi multimedia profesional."
+        path="/"
+      />
       <Navbar />
       <Home />
       <Section2 />

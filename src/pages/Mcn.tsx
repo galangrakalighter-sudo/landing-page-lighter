@@ -12,6 +12,7 @@ import FAQSection from "@/components/mcn/FAQ";
 import Partnership from "@/components/Partnership";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/home/Navbar";
+import Client from "@/components/home/Client";
 import Maps from "@/components/Maps";
 import React, { useState } from "react";
 
@@ -27,9 +28,10 @@ const MCN: React.FC = () => {
       <MonetizationSystemSection />
       <BrandCollaborationSection />
       <GrowthFrameworkSection />
-      <TalentShowcaseSection />
-      <TestimonialSection />
-
+      <Client />
+      {/* <TalentShowcaseSection /> */}
+      {/* <TestimonialSection /> */}
+      <FAQSection />
       <Maps />
       <Partnership />
       <Footer />

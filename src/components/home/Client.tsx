@@ -38,14 +38,11 @@ const Client = () => {
         <div className="text-center mb-24">
           <div className="mb-12 md:mb-12"> {/* Jarak ke bawah: 48px di mobile, 80px di desktop */}
             <h2 className="text-3xl md:text-5xl font-black tracking-tight uppercase font-[Arial,Helvetica,sans-serif] leading-tight text-white">
-              Berkolaborasi Dengan
+              Berkolaborasi Dengan <br /> Raksasa Industri
             </h2>
-            <span className="text-3xl mt-4 md:text-5xl font-black tracking-tight uppercase font-[Arial,Helvetica,sans-serif] leading-tight text-white block">
-              Raksasa Industri
-            </span>
           </div>
           <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
-            Kami tidak hanya mengerjakan proyek; kami membangun ekosistem digital untuk merek-merek yang mendefinisikan masa depan.
+            Kami tidak hanya mengerjakan proyek, kami membangun ekosistem digital untuk merek-merek yang mendefinisikan masa depan.
           </p>
         </div>
 
@@ -66,7 +63,7 @@ const Client = () => {
               </div>
 
               <div className="mt-6 text-center relative z-10">
-                <h3 className="text-[10px] md:text-xs font-bold tracking-[0.2em] text-gray-500 group-hover:text-white transition-colors uppercase">
+                <h3 className="text-[10px] md:text-xs font-bold tracking-[0.2em] text-gray-500 group-hover:text-white transition-colors uppercase font-[Arial,Helvetica,sans-serif]">
                   {client.name}
                 </h3>
               </div>
@@ -83,7 +80,7 @@ const Client = () => {
               to="#"
               className="group inline-flex items-center justify-center text-black bg-white transition-all duration-300 font-bold rounded-full text-sm sm:text-base px-10 py-4 uppercase tracking-widest"
             >
-              Lihat Selengkapnya
+              Hubungi Kami Sekarang
             </Link>
           </div>
         </div>

@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/home/Navbar";
 import Maps from "@/components/Maps";
 import React, { useState } from "react";
-
+import Client from "@/components/home/Client";
 const Multimedia: React.FC = () => {
   return (
     <main className="min-h-screen bg-[#FFFFFE] min-h-screen selection:bg-[#6B3BA7] selection:text-white font-sans scroll-smooth">
@@ -27,9 +27,10 @@ const Multimedia: React.FC = () => {
       <ProductionShowcaseSection />
       <ContentTypesSection />
       <ProcessSection />
-      <PortfolioSection />
-      <TestimonialSection />
-      {/* <FAQSection /> */}
+      {/* <PortfolioSection /> */}
+      {/* <TestimonialSection /> */}
+      <Client />
+      <FAQSection />
       <Maps />
       <Partnership />
       <Footer />

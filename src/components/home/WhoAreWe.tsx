@@ -122,7 +122,7 @@ const WhoAreWe = () => {
                   <Counter end={8} />
               </span>
               
-              {/* Teks Huruf tidak Bold (font-normal) */}
+            {/* TeksB Huruf tidak Bold (font-normal) */}
               <span className="font-normal ml-2">Tahun</span>
           </div>
           <p className="mt-2 text-gray-400 text-xl md:text-2xl lg:text-2xl text-white textChange font-medium md:ml-[4%]">Bisnis</p>

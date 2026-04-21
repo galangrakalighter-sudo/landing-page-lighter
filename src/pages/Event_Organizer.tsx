@@ -12,6 +12,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/home/Navbar";
 import Maps from "@/components/Maps";
 import React, { useState } from "react";
+import Client from "@/components/home/Client";
 
 const EventOrganizer: React.FC = () => {
   return (
@@ -23,8 +24,10 @@ const EventOrganizer: React.FC = () => {
       <SolutionSection />
       <ServicesScopeSection />
       <ProcessSection />
-      <PortfolioSection />
-      <TestimonialSection />
+      {/* <PortfolioSection /> */}
+      {/* <TestimonialSection /> */}
+      <Client />
+      <FAQSection />
       <Maps />
       <Partnership />
       <Footer />

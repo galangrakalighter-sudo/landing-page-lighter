@@ -8,6 +8,8 @@ import TestimonialSection from "@/components/branding/Testimonial";
 import AboutRaddineSection from "@/components/branding/About";
 import FAQSection from "@/components/branding/FAQ";
 import Partnership from "@/components/Partnership";
+import SEO from "@/components/Seo";
+import Client from "@/components/home/Client";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/home/Navbar";
 import Maps from "@/components/Maps";
@@ -16,6 +18,11 @@ import React, { useState } from "react";
 const Branding: React.FC = () => {
   return (
     <main className="min-h-screen">
+      <SEO 
+        title="Raddine Branding" 
+        description="Raddine Branding Membantu Usaha Anda Di Permasalahan Branding"
+        path="/"
+      />
       <Navbar />
       <HeroSection />
       <ProblemSection />
@@ -23,8 +30,8 @@ const Branding: React.FC = () => {
       <SolutionSection />
       <ServicesScopeSection />
       <ProcessSection />
-      <PortfolioSection />
-      <TestimonialSection />
+      <Client />
+      <FAQSection />
       <Maps />
       <Partnership />
       <Footer />

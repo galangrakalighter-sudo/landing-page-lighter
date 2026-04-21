@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Raddine from '@/assets/Raddine Branding.png'
 export const HeroSection = () => (
   <section className="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden bg-neutral-950 font-[Arial,Helvetica,sans-serif]">
     {/* Background Decor */}
@@ -10,36 +10,31 @@ export const HeroSection = () => (
 
     <div className="container mx-auto max-w-7xl px-6 relative z-10">
       <div className="flex flex-col lg:flex-row items-center gap-16">
-        <div className="lg:w-3/5">
-          {/* Main Title - Arial Stack */}
-          <h1 className="text-6xl md:text-8xl lg:text-[100px] font-black leading-[0.9] text-white tracking-tighter mb-8 uppercase font-[Arial,Helvetica,sans-serif]">
-            RADDINE <br />
-            <span className="relative inline-block text-red-600">STRATEGIC</span> <br />
-            SYSTEM
+        <div className="w-full lg:w-4/5 xl:w-3/5 px-4 md:px-0">
+          {/* Main Title - Responsive dari Mobile ke Desktop */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl font-black leading-[1] md:leading-[0.95] text-white tracking-tighter mb-6 uppercase font-[Arial,Helvetica,sans-serif]">
+            Solusi Branding yang <span className="text-red-600">Menghasilkan</span> Penjualan, Bukan Sekadar Tampilan
           </h1>
           
-          {/* Paragraph - Arial Stack */}
-          <p className="text-neutral-400 text-lg md:text-xl mb-12 max-w-xl leading-relaxed font-bold tracking-tight font-[Arial,Helvetica,sans-serif]">
-            Membangun otoritas brand yang tidak tergoyahkan. Kami mentransformasi identitas visual menjadi sistem pertumbuhan yang dominan dan siap skala.
-          </p>
+          {/* Paragraph - Optimal untuk SEO dan Keterbacaan */}
+          <h2 className="text-neutral-400 text-sm sm:text-base md:text-lg lg:text-3xl mb-10 max-w-2xl leading-relaxed font-medium tracking-tight font-[Arial,Helvetica,sans-serif]">
+            Branding bukan sekadar visual, ini adalah strategi untuk membuat brand Anda diingat, dipercaya, dan dipilih oleh market
+          </h2>
           
-          {/* Button - Arial Stack */}
-          <button className="px-10 py-5 bg-red-600 text-white font-black rounded-xl transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(220,38,38,0.4)] uppercase tracking-[0.2em] text-xs font-[Arial,Helvetica,sans-serif]">
-            Mulai Konsultasi
+          {/* Button - Full width di mobile, auto di desktop */}
+          <button 
+            className="group relative w-full sm:w-auto px-8 py-4 md:px-10 md:py-5 bg-red-600 text-white font-black rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(220,38,38,0.5)] active:scale-95 uppercase tracking-[0.2em] text-[10px] sm:text-xs font-[Arial,Helvetica,sans-serif]"
+            aria-label="Dapatkan Audit Branding Gratis"
+          >
+            <span className="relative z-10">Audit Branding Gratis</span>
+            {/* Glow effect on hover */}
+            <div className="absolute inset-0 rounded-xl bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
           </button>
         </div>
 
         <div className="lg:w-2/5 relative">
           <div className="aspect-[4/5] bg-neutral-900 border border-white/10 rounded-[40px] p-12 flex flex-col items-center justify-center text-center shadow-2xl transition-transform duration-500">
-            <div className="relative mb-8">
-              <div className="absolute inset-0 bg-red-600 blur-3xl opacity-20"></div>
-              <svg className="w-32 h-32 text-red-600 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-              </svg>
-            </div>
-            {/* Card Text - Arial Stack */}
-            <p className="text-white font-black text-5xl mb-2 tracking-tighter uppercase leading-none font-[Arial,Helvetica,sans-serif]">IDENTITY</p>
-            <p className="text-red-500 font-bold uppercase tracking-[0.3em] text-[10px] font-[Arial,Helvetica,sans-serif]">Framework v.1.0</p>
+            <img src={Raddine} alt="Gambar Radinne" />
           </div>
         </div>
       </div>

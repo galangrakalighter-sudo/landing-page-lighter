@@ -1,47 +1,50 @@
-import heroImage from "@/assets/Home.png";
-import LiquidEther from '@/components/LiquidEther';
-import Logo from '@/assets/Home/logo.jpg';
+import heroImage from "@/assets/Home/Home.png";
+import icon from "@/assets/Home/Logo Web LMG.png";
 
 const Home = () => {
   return (
     <>
-      <div className="relative w-full h-[1080px] overflow-hidden flex items-center justify-center">
+      {/* h-screen agar pas satu layar di semua perangkat */}
+      <div className="relative w-full h-screen min-h-[600px] overflow-hidden flex items-center justify-center">
+  
+      {/* BACKGROUND LAYER */}
+      <picture>
+        {/* Gambar Desktop (Layar > 768px) */}
+        <source media="(min-width: 768px)" srcSet={heroImage} />
         
-        {/* BOTTOM: Kolase / Hero Image */}
+        {/* Gambar Mobile */}
         <img
-          src={heroImage}
-          alt="Hero"
-          className="absolute inset-0 w-full h-full object-cover"
+          src={heroImage} 
+          alt="Background Lighter Media Group"
+          className="absolute inset-0 w-full h-full object-cover object-center md:object-center z-0 xs:mt-[12vh] sm:mt-0"
+        />
+      </picture>
+
+      {/* OVERLAY: Agar teks lebih mudah dibaca jika background terang */}
+
+      {/* CONTENT LAYER */}
+      <div className="relative z-10 container mx-auto px-6 flex flex-col items-center justify-center text-white xs:mt-[-34vh] lg:mt-[-40vh]">
+        
+        {/* ICON / LOGO */}
+        <img
+          src={icon}
+          alt="Icon LMG"
+          className="w-[30%] xs:w-[40%] sm:w-[20%] md:w-[15%] lg:w-[30%] max-w-[180px] h-auto object-contain drop-shadow-2xl mb-6 md:mb-8 transition-all duration-500 xs:mb-[-1%]"
         />
 
-        {/* OVERLAY: Agar teks lebih kontras dan terbaca */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        {/* HEADLINE */}
+        <h1 className="text-2xl text-center xs:text-[10.5vw] sm:text-4xl md:text-5xl lg:text-[2.88vw] font-extrabold leading-tight md:leading-[1.1] tracking-tight drop-shadow-2xl font-[Arial,Helvetica,sans-serif] max-w-[95%] md:max-w-none mx-auto whitespace-normal md:whitespace-nowrap">
+          Integrated Digital Media Ecosystem
+        </h1>
 
-        {/* CONTENT LAYER */}
-        <div className="relative mb-[5%] z-10 container mx-auto px-6 text-center text-white">
-    
-          {/* Headline: Menambahkan Drop Shadow agar teks lebih "keluar" */}
-          <h1 className="text-4xl md:text-6xl font-extrabold leading-[1.1] mb-6 max-w-5xl mx-auto tracking-tight drop-shadow-2xl font-[Arial,Helvetica,sans-serif]">
-            Bangun, Scale, dan Monetize Bisnis Anda dalam Satu Sistem Terintegrasi
-          </h1>
-
-          {/* Subheadline: Margin top tetap 5% sesuai script asal */}
-          <p className="text-lg mt-[8%] md:text-2xl font-medium mb-10 max-w-3xl mx-auto text-gray-200 leading-relaxed drop-shadow-md font-[Arial,Helvetica,sans-serif]">
-            Kami membantu brand berkembang dari branding, marketing, hingga revenue dengan dukungan media dan teknologi dalam satu ekosistem.
-          </p>
-
-          {/* CTA Button: Menambahkan efek hover glow yang lebih halus */}
-          <div className="flex flex-col items-center gap-4">
-            <a 
-              href="#konsultasi" 
-              className="bg-orange-500 hover:bg-orange-600 text-white font-black py-5 px-12 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(249,115,22,0.4)] shadow-2xl text-xl tracking-wide uppercase font-[Arial,Helvetica,sans-serif]"
-            >
-              🔥 Konsultasi Gratis
-            </a>
-          </div>
-        </div>
-
+        {/* SUB-HEADLINE */}
+        <p className="mt-4 md:mt-6 text-sm xs:text-xl xs:text-center sm:text-center sm:text-lg md:text-xl lg:text-2xl leading-relaxed max-w-[90%] sm:max-w-2xl lg:max-w-4xl font-[Arial,Helvetica,sans-serif] opacity-90">
+          Kami membantu usaha berkembang dari branding, marketing, 
+          <span className="hidden md:inline"> <br /> </span> 
+          hingga omset dalam satu ekosistem digital
+        </p>
       </div>
+    </div>
     </>
   );
 };

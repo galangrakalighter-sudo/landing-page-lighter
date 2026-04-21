@@ -1,0 +1,24 @@
+.wp-block-image img {
+  border-radius: 8px;
+}
+
+.wp-block-heading {
+  font-weight: bold;
+}
+
+.wp-block-paragraph {
+  margin-bottom: 1rem;
+}
+
+.prose .wp-block-heading {
+  font-size: 28px;
+  margin-top: 1.5rem;
+}
+
+.prose .wp-block-image img {
+  margin: 1.5rem 0;
+}
+
+.prose h2 {
+  scroll-margin-top: 100px;
+}

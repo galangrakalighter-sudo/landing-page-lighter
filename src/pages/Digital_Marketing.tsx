@@ -10,6 +10,7 @@ import StrategySection from "@/components/digital_marketing/Strategy";
 import FAQSection from "@/components/digital_marketing/FAQ";
 import Partnership from "@/components/Partnership";
 import Footer from "@/components/Footer";
+import Client from "@/components/home/Client";
 import Navbar from "@/components/home/Navbar";
 import Maps from "@/components/Maps";
 import React, { useState } from "react";
@@ -25,9 +26,10 @@ const DigitalMarketing: React.FC = () => {
       <ServicesScopeSection />
       <StrategySection />
       <ProcessSection />
-      <PortfolioSection />
-      <TestimonialSection />
-      {/* <FAQSection /> */}
+      {/* <PortfolioSection /> */}
+      <Client />
+      {/* <TestimonialSection /> */}
+      <FAQSection />
       <Maps />
       <Partnership />
       <Footer />
